@@ -81,9 +81,11 @@ The UI can be navigated and is clear to the user as well as being aesthetically 
 Account creation
 Each user will be given an account where they set their username and password (usernames will be unique because they will be recorded when the user posts)
 A nice logo
-	Adds to the professional quality of the UI
+Adds to the professional quality of the UI
 Category hierarchy
 Users will be able to select more than one broad category to classify their hobby (more like a hashtag system than the hierarchy in the MVP)
+Support links in posts
+Posts may include links to sites or images, but in our MVP they will be shown in plain text (incorporate links so that when users click they are automatically redirected instead of copy and pasting)
 Images/file comp
 Users will be able to attach files and images to their posts (requires file compression on the server side)
 Commenting on posts (“threads” of conversation)
@@ -93,7 +95,7 @@ Users will be able to react to posts with emojis
 Moderation
 The app will be moderated both to maintain the integrity of the service and to make best use of server space
 Delete posts (a la snapchat) after a certain amount of time to save server space
-	In order to make the best use of server space, old posts will be deleted
+In order to make the best use of server space, old posts will be deleted
 Delete hobbies if not in use
 In order to make the best use of server space, hobbies that have been inactive (no users have posted) for a given amount of time will be deleted along will as the associated posts
 Users ‘subscribe’ to hobbies/categories
