@@ -6,8 +6,18 @@
              mc:Ignorable="d"
              x:Class="Hobby_Hub.MainPage">
 
-    <StackLayout>
+    <StackLayout Margin="20">
         <!-- Place new controls here -->
+        <!-- This is the info for the text field -->
+        <Entry HorizontalOptions="Center" 
+        VerticalOptions="CenterAndExpand" 
+               Placeholder="Enter a test string" PlaceholderColor="Gray"
+               MaxLength="20"
+               WidthRequest="300"
+               ClearButtonVisibility="WhileEditing"
+               ReturnType="Send"
+               Completed="Entry_Completed"/>
+        <!-- default text -->
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
