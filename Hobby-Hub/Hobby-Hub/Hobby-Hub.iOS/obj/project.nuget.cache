@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "CbN9zyBTW/UQ8Iv9b5pGevHXU1MboB1f9CaRudLddNpgaadChQlFHxucdWgiqsDviK6xykK4x9MlXG/9BeRNhA==",
+  "dgSpecHash": "YNAvTOczoBG+xBDo52Tm4dR7IYm5RfhO0m8zrqmfy9Rapk0dkkzzuia+JlV+0uVQsV5KzVidy11Diuw+/TIHhg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bremm\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.reactive\\4.0.0\\system.reactive.4.0.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],

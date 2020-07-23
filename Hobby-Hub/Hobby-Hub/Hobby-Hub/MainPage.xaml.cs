@@ -5,25 +5,75 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Firebase.Database;
+using Firebase.Database.Query;
+using HobbyHub;
+using HobbyHub.Model;
 
 namespace Hobby_Hub
 {
+    
+
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
+
+        FirebaseHelper firebaseHelper = new FirebaseHelper();
         public MainPage()
         {
             InitializeComponent();
         }
-        //This method is accessed when you hit the bottom right button on the keyboard
-        //Causes a popup confirming your string was recoreded...
-        //...And saves the text you input as a string called "inputText"
-        async private void Entry_Completed(object sender, EventArgs e)
+        
+       protected async override void OnAppearing()
         {
-            string inputText = ((Entry)sender).Text;
-            await DisplayAlert("Your Input has been recorded", "Your input \"" + inputText + "\" has been saved and will be sent to our servers", "OK");
+            base.OnAppearing();
+            var allPersons = await firebaseHelper.GetAllPersons();
+            lstPersons.ItemsSource = allPersons;
+        }
+       
+        private async void BtnAdd_Clicked(object sender, EventArgs e)
+        {
+            await firebaseHelper.AddPerson(Convert.ToInt32(txtId.Text), txtName.Text);
+            txtId.Text = string.Empty;
+            txtName.Text = string.Empty;
+            await DisplayAlert("Success", "Person Added Successfully", "OK");
+            var allPersons = await firebaseHelper.GetAllPersons();
+            lstPersons.ItemsSource = allPersons;
+        }
+        private async void BtnRetrive_Clicked(object sender, EventArgs e)
+        {
+            var person = await firebaseHelper.GetPerson(Convert.ToInt32(txtId.Text));
+            if (person != null)
+            {
+                txtId.Text = person.PersonId.ToString();
+                txtName.Text = person.Name;
+                await DisplayAlert("Success", "Person Retrive Successfully", "OK");
+
+            }
+            else
+            {
+                await DisplayAlert("Success", "No Person Available", "OK");
+            }
+
+        }
+        private async void BtnUpdate_Clicked(object sender, EventArgs e)
+        {
+            await firebaseHelper.UpdatePerson(Convert.ToInt32(txtId.Text), txtName.Text);
+            txtId.Text = string.Empty;
+            txtName.Text = string.Empty;
+            await DisplayAlert("Success", "Person Updated Successfully", "OK");
+            var allPersons = await firebaseHelper.GetAllPersons();
+            lstPersons.ItemsSource = allPersons;
+        }
+        private async void BtnDelete_Clicked(object sender, EventArgs e)
+        {
+            await firebaseHelper.DeletePerson(Convert.ToInt32(txtId.Text));
+            await DisplayAlert("Success", "Person Deleted Successfully", "OK");
+            var allPersons = await firebaseHelper.GetAllPersons();
+            lstPersons.ItemsSource = allPersons;
         }
     }
 }

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj": {}
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj": {
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
         "projectName": "Hobby-Hub.iOS",
-        "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
-        "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\obj\\",
+        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\bremm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
-                "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
+              "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+                "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
               }
             }
           }
@@ -65,20 +65,20 @@
         }
       }
     },
-    "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
         "projectName": "Hobby-Hub",
-        "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
-        "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
+        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\bremm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -103,6 +103,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
