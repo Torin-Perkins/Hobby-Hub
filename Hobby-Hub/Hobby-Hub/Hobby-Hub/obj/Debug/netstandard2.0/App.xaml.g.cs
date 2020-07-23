@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hobby-Hub.App.xaml", "App.xaml", typeof(global::Hobby_Hub.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("HobbyHub.App.xaml", "App.xaml", typeof(global::Hobby_Hub.App))]
 
 namespace Hobby_Hub {
     

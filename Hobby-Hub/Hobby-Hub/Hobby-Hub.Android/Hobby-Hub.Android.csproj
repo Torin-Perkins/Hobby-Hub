@@ -67,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -93,9 +96,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Hobby-Hub\Hobby-Hub.csproj">
-      <Project>{A78C6621-48A8-4670-9F84-0B925C8A204B}</Project>
-      <Name>Hobby-Hub</Name>
+    <ProjectReference Include="..\Hobby-Hub\HobbyHub.csproj">
+      <Project>{5507ED89-311A-4F61-9610-FB337A87AB20}</Project>
+      <Name>HobbyHub</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

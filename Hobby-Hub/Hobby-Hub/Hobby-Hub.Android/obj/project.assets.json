@@ -875,7 +875,7 @@
           "build/Xamarin.Forms.targets": {}
         }
       },
-      "Hobby-Hub/1.0.0": {
+      "HobbyHub/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -884,10 +884,10 @@
           "Xamarin.Forms": "4.5.0.495"
         },
         "compile": {
-          "bin/placeholder/Hobby-Hub.dll": {}
+          "bin/placeholder/HobbyHub.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Hobby-Hub.dll": {}
+          "bin/placeholder/HobbyHub.dll": {}
         }
       }
     }
@@ -2310,15 +2310,15 @@
         "xamarin.forms.nuspec"
       ]
     },
-    "Hobby-Hub/1.0.0": {
+    "HobbyHub/1.0.0": {
       "type": "project",
-      "path": "../Hobby-Hub/Hobby-Hub.csproj",
-      "msbuildProject": "../Hobby-Hub/Hobby-Hub.csproj"
+      "path": "../Hobby-Hub/HobbyHub.csproj",
+      "msbuildProject": "../Hobby-Hub/HobbyHub.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
-      "Hobby-Hub >= 1.0.0",
+      "HobbyHub >= 1.0.0",
       "Xamarin.Essentials >= 1.3.1",
       "Xamarin.Forms >= 4.5.0.495"
     ]
@@ -2355,8 +2355,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
-              "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
+            "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\HobbyHub.csproj": {
+              "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\HobbyHub.csproj"
             }
           }
         }

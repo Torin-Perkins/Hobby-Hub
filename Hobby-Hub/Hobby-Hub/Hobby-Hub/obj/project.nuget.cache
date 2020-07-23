@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JIqrIKwgM2XIggfRJCa/xBe1FJZVa9RthHl2nadupcp1JfgbYvcIDlPCqhzCDX28dgrkN6HurcbPoN8cvBVdYw==",
+  "dgSpecHash": "Z1CP7d+jD55Wv6tNP6GjqxTMVQLGiBvx3uqbJe2F4FMEDhCJxszhTCwzk6XZj46TkSUaJcVhiUQH0am2eqEg+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\HobbyHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tdmp4\\.nuget\\packages\\firebasedatabase.net\\4.0.4\\firebasedatabase.net.4.0.4.nupkg.sha512",
     "C:\\Users\\tdmp4\\.nuget\\packages\\litedb\\4.1.4\\litedb.4.1.4.nupkg.sha512",

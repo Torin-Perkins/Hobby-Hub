@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HobbyHub;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Hobby_Hub
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new SignUp());
         }
 
         protected override void OnStart()

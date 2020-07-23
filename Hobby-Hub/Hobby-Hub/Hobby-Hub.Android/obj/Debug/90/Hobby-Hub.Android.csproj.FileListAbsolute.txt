@@ -480,8 +480,6 @@ C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub.aab
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub-Signed.aab
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub-Signed.apk
-C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\Hobby-Hub.dll
-C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\Hobby-Hub.pdb
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\build.props
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\adb.props
@@ -546,8 +544,6 @@ C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.Android.dll
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.Android.pdb
-C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.dll
-C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.pdb
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\LiteDB.dll
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Mono.Android.dll
@@ -955,3 +951,7 @@ C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\HobbyHub.dll
+C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\HobbyHub.pdb
+C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.dll
+C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.pdb

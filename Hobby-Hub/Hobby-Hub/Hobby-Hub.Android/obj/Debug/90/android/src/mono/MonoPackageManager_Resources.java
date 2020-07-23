@@ -5,7 +5,7 @@ public class MonoPackageManager_Resources {
 		"Hobby-Hub.Android.dll",
 		"Firebase.dll",
 		"FormsViewGroup.dll",
-		"Hobby-Hub.dll",
+		"HobbyHub.dll",
 		"LiteDB.dll",
 		"Newtonsoft.Json.dll",
 		"System.Reactive.dll",

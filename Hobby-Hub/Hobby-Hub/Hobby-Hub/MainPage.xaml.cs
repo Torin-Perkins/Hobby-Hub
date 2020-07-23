@@ -19,14 +19,14 @@ namespace Hobby_Hub
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
+      //  FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
 
-        FirebaseHelper firebaseHelper = new FirebaseHelper();
+      //  FirebaseHelper firebaseHelper = new FirebaseHelper();
         public MainPage()
         {
             InitializeComponent();
         }
-        
+        /*
        protected async override void OnAppearing()
         {
             base.OnAppearing();
@@ -48,8 +48,8 @@ namespace Hobby_Hub
             var person = await firebaseHelper.GetPerson(Convert.ToInt32(txtId.Text));
             if (person != null)
             {
-                txtId.Text = person.PersonId.ToString();
-                txtName.Text = person.Name;
+             //   txtId.Text = person.PersonId.ToString();
+               // txtName.Text = person.Username;
                 await DisplayAlert("Success", "Person Retrive Successfully", "OK");
 
             }
@@ -75,5 +75,6 @@ namespace Hobby_Hub
             var allPersons = await firebaseHelper.GetAllPersons();
             lstPersons.ItemsSource = allPersons;
         }
+        */
     }
 }
