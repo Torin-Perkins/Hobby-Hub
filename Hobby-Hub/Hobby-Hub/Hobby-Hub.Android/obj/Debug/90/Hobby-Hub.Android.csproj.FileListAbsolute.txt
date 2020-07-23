@@ -4,8 +4,6 @@ C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub.aab
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub-Signed.aab
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\com.companyname.hobby_hub-Signed.apk
-C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\Hobby-Hub.dll
-C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\Hobby-Hub.pdb
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\build.props
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\adb.props
@@ -69,8 +67,6 @@ C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.Android.dll
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.Android.pdb
-C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.dll
-C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Hobby-Hub.pdb
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Java.Interop.dll
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Mono.Android.pdb
@@ -955,3 +951,12 @@ C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\HobbyHub.pdb
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.dll
 C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.pdb
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\HobbyHub.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\bin\Debug\HobbyHub.pdb
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Firebase.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\HobbyHub.pdb
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\LiteDB.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\System.Reactive.dll
+C:\Users\bremm\Source\Repos\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub.Android\obj\Debug\90\android\assets\System.Runtime.InteropServices.WindowsRuntime.dll
