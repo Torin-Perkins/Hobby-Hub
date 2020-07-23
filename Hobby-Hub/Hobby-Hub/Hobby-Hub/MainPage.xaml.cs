@@ -1,80 +1,128 @@
-﻿using System;
+﻿using HobbyHub.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
-using Firebase.Database;
-using Firebase.Database.Query;
-using HobbyHub;
-using HobbyHub.Model;
+using Xamarin.Forms.Xaml;
 
-namespace Hobby_Hub
+namespace HobbyHub
 {
-    
 
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-      //  FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
+        readonly FirebaseHelper firebaseHelper = new FirebaseHelper();
 
-      //  FirebaseHelper firebaseHelper = new FirebaseHelper();
         public MainPage()
         {
             InitializeComponent();
         }
-        /*
-       protected async override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-            var allPersons = await firebaseHelper.GetAllPersons();
-            lstPersons.ItemsSource = allPersons;
+
+            await FetchAllPersons();
         }
-       
+
         private async void BtnAdd_Clicked(object sender, EventArgs e)
         {
-            await firebaseHelper.AddPerson(Convert.ToInt32(txtId.Text), txtName.Text);
-            txtId.Text = string.Empty;
-            txtName.Text = string.Empty;
-            await DisplayAlert("Success", "Person Added Successfully", "OK");
-            var allPersons = await firebaseHelper.GetAllPersons();
-            lstPersons.ItemsSource = allPersons;
-        }
-        private async void BtnRetrive_Clicked(object sender, EventArgs e)
-        {
-            var person = await firebaseHelper.GetPerson(Convert.ToInt32(txtId.Text));
+            if (!IsFormValid())
+            {
+                await DisplayAlert("Error", "Name and person are required fields", "OK");
+                return;
+            }
+
+            var person = await firebaseHelper.GetPerson(TxtName.Text);
+
             if (person != null)
             {
-             //   txtId.Text = person.PersonId.ToString();
-               // txtName.Text = person.Username;
-                await DisplayAlert("Success", "Person Retrive Successfully", "OK");
-
-            }
-            else
-            {
-                await DisplayAlert("Success", "No Person Available", "OK");
+                await DisplayAlert("Error", "A person with that name already exist", "OK");
+                return;
             }
 
+            await firebaseHelper.AddPerson(TxtName.Text, TxtPhone.Text);
+
+            TxtName.Text = string.Empty;
+            TxtPhone.Text = string.Empty;
+
+            await DisplayAlert("Success", "Person Added Successfully", "OK");
+
+            await FetchAllPersons();
         }
+
         private async void BtnUpdate_Clicked(object sender, EventArgs e)
         {
-            await firebaseHelper.UpdatePerson(Convert.ToInt32(txtId.Text), txtName.Text);
-            txtId.Text = string.Empty;
-            txtName.Text = string.Empty;
+            if (SelectedPerson == null)
+            {
+                await DisplayAlert("Error", "A person must be selected to proceed", "OK");
+                return;
+            }
+
+            if (!IsFormValid())
+            {
+                await DisplayAlert("Error", "Name and person are required fields", "OK");
+                return;
+            }
+
+            var person = await firebaseHelper.GetPerson(TxtName.Text);
+
+            if (person != null && person.PersonId != SelectedPerson.PersonId)
+            {
+                await DisplayAlert("Error", "A person with that name already exist", "OK");
+                return;
+            }
+
+            await firebaseHelper.UpdatePerson(SelectedPerson.PersonId, TxtName.Text, TxtPhone.Text);
+
+            TxtName.Text = string.Empty;
+            TxtPhone.Text = string.Empty;
+
             await DisplayAlert("Success", "Person Updated Successfully", "OK");
-            var allPersons = await firebaseHelper.GetAllPersons();
-            lstPersons.ItemsSource = allPersons;
+
+            await FetchAllPersons();
         }
+
         private async void BtnDelete_Clicked(object sender, EventArgs e)
         {
-            await firebaseHelper.DeletePerson(Convert.ToInt32(txtId.Text));
+            if (SelectedPerson == null)
+            {
+                await DisplayAlert("Error", "A person must be selected to proceed", "OK");
+                return;
+            }
+
+            await firebaseHelper.DeletePerson(SelectedPerson.PersonId);
+
             await DisplayAlert("Success", "Person Deleted Successfully", "OK");
-            var allPersons = await firebaseHelper.GetAllPersons();
-            lstPersons.ItemsSource = allPersons;
+
+            await FetchAllPersons();
         }
-        */
+
+        private async void LstPersons_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var person = await firebaseHelper.GetPerson(SelectedPerson.PersonId);
+
+            TxtName.Text = person.Name;
+            TxtPhone.Text = person.Phone;
+        }
+
+        private async Task FetchAllPersons()
+        {
+            var allPersons = await firebaseHelper.GetAllPersons();
+
+            LstPersons.ItemsSource = allPersons;
+        }
+
+        private Person SelectedPerson => (Person)LstPersons.SelectedItem;
+
+        private bool IsFormValid() => IsNameValid() && IsPhoneValid();
+
+        private bool IsNameValid() => !string.IsNullOrWhiteSpace(TxtName.Text);
+
+        private bool IsPhoneValid() => !string.IsNullOrWhiteSpace(TxtPhone.Text);
     }
+
 }

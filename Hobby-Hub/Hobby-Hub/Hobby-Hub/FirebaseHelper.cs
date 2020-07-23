@@ -11,154 +11,67 @@ using Xamarin.Forms;
 
 namespace HobbyHub
 {
-    public class FirebaseHelper {
-        public static FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
-        public static async Task<List<Person>> GetAllUser()
+    public class FirebaseHelper
+    {
+        private readonly string ChildName = "Persons";
+
+        readonly FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
+
+        public async Task<List<Person>> GetAllPersons()
         {
-            try
-            {
-                var userlist = (await firebase
-                .Child("Person")
-                .OnceAsync<Person>()).Select(item =>
-                new Person
+            return (await firebase
+                .Child(ChildName)
+                .OnceAsync<Person>()).Select(item => new Person
                 {
-                    Email = item.Object.Email,
-                    Password = item.Object.Password
+                    Name = item.Object.Name,
+                    PersonId = item.Object.PersonId,
+                    Phone = item.Object.Phone
                 }).ToList();
-                return userlist;
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return null;
-            }
         }
 
-        //Read     
-        public static async Task<Person> GetUser(string email)
+        public async Task AddPerson(string name, string phone)
         {
-            try
-            {
-                var allPerson = await GetAllUser();
-                await firebase
-                .Child("Person")
+            await firebase
+                .Child(ChildName)
+                .PostAsync(new Person() { PersonId = Guid.NewGuid(), Name = name, Phone = phone });
+        }
+
+        public async Task<Person> GetPerson(Guid personId)
+        {
+            var allPersons = await GetAllPersons();
+            await firebase
+                .Child(ChildName)
                 .OnceAsync<Person>();
-                return allPerson.Where(a => a.Email == email).FirstOrDefault();
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return null;
-            }
+            return allPersons.FirstOrDefault(a => a.PersonId == personId);
         }
 
-        //Inser a user    
-        public static async Task<bool> AddUser(string email, string password)
+        public async Task<Person> GetPerson(string name)
         {
-            try
-            {
-
-
-                await firebase
-                .Child("Person")
-                .PostAsync(new Person() { Email = email, Password = password });
-                return true;
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return false;
-            }
+            var allPersons = await GetAllPersons();
+            await firebase
+                .Child(ChildName)
+                .OnceAsync<Person>();
+            return allPersons.FirstOrDefault(a => a.Name == name);
         }
 
-        //Update     
-        public static async Task<bool> UpdateUser(string email, string password)
+        public async Task UpdatePerson(Guid personId, string name, string phone)
         {
-            try
-            {
+            var toUpdatePerson = (await firebase
+                .Child(ChildName)
+                .OnceAsync<Person>()).FirstOrDefault(a => a.Object.PersonId == personId);
 
-
-                var toUpdateUser = (await firebase
-                .Child("Person")
-                .OnceAsync<Person>()).Where(a => a.Object.Email == email).FirstOrDefault();
-                await firebase
-                .Child("Person")
-                .Child(toUpdateUser.Key)
-                .PutAsync(new Person() { Email = email, Password = password });
-                return true;
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return false;
-            }
+            await firebase
+                .Child(ChildName)
+                .Child(toUpdatePerson.Key)
+                .PutAsync(new Person() { PersonId = personId, Name = name, Phone = phone });
         }
 
-        //Delete User    
-        public static async Task<bool> DeleteUser(string email)
+        public async Task DeletePerson(Guid personId)
         {
-            try
-            {
-
-
-                var toDeletePerson = (await firebase
-                .Child("Person")
-                .OnceAsync<Person>()).Where(a => a.Object.Email == email).FirstOrDefault();
-                await firebase.Child("Person").Child(toDeletePerson.Key).DeleteAsync();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine($"Error:{e}");
-                return false;
-            }
+            var toDeletePerson = (await firebase
+                .Child(ChildName)
+                .OnceAsync<Person>()).FirstOrDefault(a => a.Object.PersonId == personId);
+            await firebase.Child(ChildName).Child(toDeletePerson.Key).DeleteAsync();
         }
-
-        /*
-                FirebaseClient firebase = new FirebaseClient("https://hobbyhub-e6f54.firebaseio.com/");
-                public async Task<List<Person>> GetAllPersons()
-                {
-                    return (await firebase.Child("Persons").OnceAsync<Person>()).Select(item => new Person
-                    {
-                        Username = item.Object.Username,
-                        PersonId = item.Object.PersonId
-                    }).ToList();
-                }
-
-                public async Task AddPerson(int personId, string name)
-                {
-
-                    await firebase
-                      .Child("Persons")
-                      .PostAsync(new Person() { PersonId = personId, Username = name });
-                }
-                public async Task<Person> GetPerson(int personId)
-                {
-                    var allPersons = await GetAllPersons();
-                    await firebase
-                      .Child("Persons")
-                      .OnceAsync<Person>();
-                    return allPersons.Where(a => a.PersonId == personId).FirstOrDefault();
-                }
-                public async Task UpdatePerson(int personId, string name)
-                {
-                    var toUpdatePerson = (await firebase
-                      .Child("Persons")
-                      .OnceAsync<Person>()).Where(a => a.Object.PersonId == personId).FirstOrDefault();
-
-                    await firebase
-                      .Child("Persons")
-                      .Child(toUpdatePerson.Key)
-                      .PutAsync(new Person() { PersonId = personId, Username = name });
-                }
-                public async Task DeletePerson(int personId)
-                {
-                    var toDeletePerson = (await firebase
-                      .Child("Persons")
-                      .OnceAsync<Person>()).Where(a => a.Object.PersonId == personId).FirstOrDefault();
-                    await firebase.Child("Persons").Child(toDeletePerson.Key).DeleteAsync();
-
-                }
-                */
     }
 }

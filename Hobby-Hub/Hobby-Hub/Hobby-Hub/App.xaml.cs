@@ -10,8 +10,8 @@ namespace Hobby_Hub
         public App()
         {
             InitializeComponent();
+            MainPage = new MainPage();
 
-            MainPage = new NavigationPage(new SignUp());
         }
 
         protected override void OnStart()
