@@ -24,5 +24,9 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< Updated upstream
 _nugetassetstimestamp=637308482620046846
+=======
+_nugetassetstimestamp=637311901580247579
+>>>>>>> Stashed changes
 typemapkind=strings-asm
