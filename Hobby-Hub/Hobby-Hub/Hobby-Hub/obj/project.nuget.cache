@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mrvooHv80KgjkHlnh0c51PocXCAuf6TuE1cJQModQ6Apd0GMhWr8rcG/31+hclTF/8fjwfNgbS8blMWu/w8acg==",
+  "dgSpecHash": "5MftTCNmV2943hOs1/azbpo92nlNGvvMLyXBRJzysFGW1F8KCEHIdlngCewMag4x5uidRgrXB1BWfBKcfrspEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+  "projectFilePath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tdmp4\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\tdmp4\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\tdmp4\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],
