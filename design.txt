@@ -21,7 +21,6 @@ Language:
 	XAML
 IDE:
 	VScode
-
 Database: SQLite
 	MySQL?
 	AWS?

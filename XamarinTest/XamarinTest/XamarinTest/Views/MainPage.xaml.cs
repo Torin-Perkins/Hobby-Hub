@@ -30,11 +30,29 @@ namespace XamarinTest.Views
             {
                 switch (id)
                 {
+                    case (int)MenuItemType.About:
+                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        break;
                     case (int)MenuItemType.Browse:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                    case (int)MenuItemType.Science:
+                        MenuPages.Add(id, new NavigationPage(new SciencePage()));
+                        break;
+                    case (int)MenuItemType.Engineering:
+                        MenuPages.Add(id, new NavigationPage(new EngineeringPage()));
+                        break;
+                    case (int)MenuItemType.Technology:
+                        MenuPages.Add(id, new NavigationPage(new TechnologyPage()));
+                        break;
+                    case (int)MenuItemType.Math:
+                        MenuPages.Add(id, new NavigationPage(new MathPage()));
+                        break;
+                    case (int)MenuItemType.Art:
+                        MenuPages.Add(id, new NavigationPage(new ArtPage()));
+                        break;
+                    case (int)MenuItemType.Sports:
+                        MenuPages.Add(id, new NavigationPage(new SportsPage()));
                         break;
                 }
             }
