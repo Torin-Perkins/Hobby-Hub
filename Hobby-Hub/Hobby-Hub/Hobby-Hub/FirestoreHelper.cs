@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,10 +34,12 @@ namespace HobbyHub
             var query = await CrossCloudFirestore.Current
                                      .Instance
                                      .GetCollection("Posts")
-                                     .WhereEqualsTo("Catiegory", catiegory)
-   
+                                     .WhereEqualsTo("catiegory", catiegory)
                                      .GetDocumentsAsync();
-            List<Post> posts = query.ToObjects<Post>().ToList();
+            System.Diagnostics.Debug.WriteLine("POSTS: " + query.ToObjects<Post>().ToList<Post>().First().postText);
+            List<Post> posts = query.ToObjects<Post>().ToList<Post>();
+            posts.Sort((x, y) => DateTime.Compare(x.date, y.date));
+            
             
            
             return posts;

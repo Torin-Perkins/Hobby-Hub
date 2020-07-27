@@ -29,7 +29,7 @@ namespace Hobby_Hub
 				  return;
 			  }
 			
-			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = "1234", date = new Timestamp(), postText = Message.Text,catiegory = "Test"};
+			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = "1234", date =  DateTime.Now, postText = Message.Text,catiegory = "Test"};
 			  fs.test(post);
 
 			// fs.test();
@@ -64,11 +64,11 @@ namespace Hobby_Hub
 				return poID;
 			}
 
-
-		}
+        }
 		private async void updateMessagesAsync()
 		{
-			var allPosts = await fs.getMessages("Test");
+			List<Post> allPosts = await fs.getMessages("Test");
+			System.Diagnostics.Debug.WriteLine(allPosts.First().ToString());
 			Msg.ItemsSource = allPosts;
 		}
 	}

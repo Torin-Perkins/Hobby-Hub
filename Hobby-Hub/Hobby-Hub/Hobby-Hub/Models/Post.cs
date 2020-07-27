@@ -12,7 +12,7 @@ namespace HobbyHub.Models
         public string postID { get; set; }
         public string postedByUser { get; set; }
 
-        public Timestamp date { get; set; }
+        public DateTime date { get; set; }
         public string postText { get; set; }
         public string catiegory { get; set; }
 }
