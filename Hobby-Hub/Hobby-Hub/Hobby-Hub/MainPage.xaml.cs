@@ -4,6 +4,7 @@ using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,15 @@ namespace Hobby_Hub
 	public partial class MainPage : ContentPage
 	{
 		FirestoreHelper fs = new FirestoreHelper();
+		string user;
+		
+
 		public MainPage()
 		{
+			user = generateUID();
 			InitializeComponent();
 		}
+
         public async void BtnSend(object sender, EventArgs e)
         {
 			   if (!IsFormValid())
@@ -29,7 +35,7 @@ namespace Hobby_Hub
 				  return;
 			  }
 			
-			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = "1234", date =  DateTime.Now, postText = Message.Text,catiegory = "Test"};
+			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = user, date =  DateTime.Now, postText = Message.Text + " -User#" + user,catiegory = "Test"};
 			  fs.test(post);
 
 			// fs.test();
@@ -70,6 +76,27 @@ namespace Hobby_Hub
 			List<Post> allPosts = await fs.getMessages("Test");
 			System.Diagnostics.Debug.WriteLine(allPosts.First().ToString());
 			Msg.ItemsSource = allPosts;
+		}
+		private string generateUID()
+        {
+			Random rnd = new Random();
+			int[] numbers = new int[6];
+			string userID = "";
+
+			for (int i = 0; i < 6; i++)
+			{
+				userID += rnd.Next(10).ToString();
+			}
+			var query = fs.queryUsers(userID);
+			if (query.ToString() != "System.Threading.Tasks.Task`1[System.Object]")
+			{
+
+				return generateUID();
+			}
+			else
+			{
+				return userID;
+			}
 		}
 	}
 }

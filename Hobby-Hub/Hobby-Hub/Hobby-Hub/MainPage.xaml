@@ -9,11 +9,13 @@
     <StackLayout>
         <ListView VerticalOptions="StartAndExpand" 
                   x:Name="Msg" 
+                  
                   >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell 
+                        TextColor="Black"
                         Text="{Binding postText}" >
                     </TextCell>
                 </DataTemplate>
@@ -24,6 +26,7 @@
                x:Name="Message"
                Placeholder="Enter your message here"
                VerticalOptions="End"
+               MaxLength="50"
                />
         <Button x:Name="Send"
                 Text="Send"

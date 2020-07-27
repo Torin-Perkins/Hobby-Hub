@@ -29,6 +29,15 @@ namespace HobbyHub
             
             return document;
         }
+        public async Task<object> queryUsers(string userID)
+        {
+            var document = await CrossCloudFirestore.Current.
+                Instance.
+                GetCollection("Users").
+                WhereEqualsTo("UID", userID).
+                LimitTo(1).GetDocumentsAsync();
+            return document;
+        }
         public async Task<List<Post>> getMessages(string catiegory)
         {
             var query = await CrossCloudFirestore.Current
