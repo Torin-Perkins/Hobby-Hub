@@ -10,7 +10,7 @@ namespace Hobby_Hub
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new AppMasterDetailPage();
         }
 
         protected override void OnStart()
