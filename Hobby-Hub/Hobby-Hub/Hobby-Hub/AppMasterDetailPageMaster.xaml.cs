@@ -40,7 +40,7 @@ public partial class AppMasterDetailPageMaster : ContentPage
                     new AppMasterDetailPageMasterMenuItem { Id = 4, Title = "Science" },
                     new AppMasterDetailPageMasterMenuItem { Id = 5, Title = "Sports" },
                     new AppMasterDetailPageMasterMenuItem { Id = 6, Title = "Tech" },
-                    new AppMasterDetailPageMasterMenuItem { Id = 7, Title = "About"}
+                    new AppMasterDetailPageMasterMenuItem { Id = 7, Title = "About", TargetType = typeof(AboutPage)}
                 });
         }
 

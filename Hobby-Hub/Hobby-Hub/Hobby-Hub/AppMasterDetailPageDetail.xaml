@@ -8,11 +8,7 @@
              Title="Home Page">
     
   <StackLayout Padding="10">
-    <Label 
+        <Label 
             Text="Welcome to Hobby Hub! To get started, just click on the icon in the upper left"/>
-
-        <Image Source="homeButton" 
-            Aspect="AspectFit">
-     </Image>
-  </StackLayout>
+    </StackLayout>
 </ContentPage>
