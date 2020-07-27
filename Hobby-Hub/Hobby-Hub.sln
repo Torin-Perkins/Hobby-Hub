@@ -5,9 +5,14 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub.Android", "Hobby-Hub\Hobby-Hub.Android\Hobby-Hub.Android.csproj", "{AAB3BF29-876A-46F2-A3A9-D8DA061F16F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub.iOS", "Hobby-Hub\Hobby-Hub.iOS\Hobby-Hub.iOS.csproj", "{81A1AE19-D277-469F-864B-13E3DB26C2B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HobbyHub.iOS", "Hobby-Hub\Hobby-Hub.iOS\HobbyHub.iOS.csproj", "{81A1AE19-D277-469F-864B-13E3DB26C2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub", "Hobby-Hub\Hobby-Hub\Hobby-Hub.csproj", "{5507ED89-311A-4F61-9610-FB337A87AB20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hobby-Hub", "Hobby-Hub\Hobby-Hub\Hobby-Hub.csproj", "{5507ED89-311A-4F61-9610-FB337A87AB20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C4FA4922-5964-4E8A-8631-F065CF77CE24}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

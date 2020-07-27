@@ -1,12 +1,46 @@
 {
   "version": 2,
-  "dgSpecHash": "Gog317Jnfm/3cjTYD1zOzfGZiJ8cU/NMzAaFyUC6TheU8n0SnuBeuXNLt1jdq63o1x4b4ekpY6qNSOYDQJK1oQ==",
+  "dgSpecHash": "3/7Hh236X56gvBhmGSrFK5AJFqBV27Qrd3B0OyLeRAu4PJs7qE9/5iMziCM9iqSl2PD7xgqSY8sPSCakKRT4Ag==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+  "projectFilePath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\HobbyHub.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\tdmp4\\.nuget\\packages\\plugin.cloudfirestore\\3.1.0.2\\plugin.cloudfirestore.3.1.0.2.nupkg.sha512",
     "C:\\Users\\tdmp4\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.reactive\\4.3.2\\system.reactive.4.3.2.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\xamarin.build.download\\0.10.0\\xamarin.build.download.0.10.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\xamarin.firebase.ios.cloudfirestore\\1.12.0\\xamarin.firebase.ios.cloudfirestore.1.12.0.nupkg.sha512",
+    "C:\\Users\\tdmp4\\.nuget\\packages\\xamarin.firebase.ios.core\\6.6.6\\xamarin.firebase.ios.core.6.6.6.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.5.3.2 to 1.3.1. Reference the package directly from the project to select a different version. \r\n HobbyHub.iOS -> Hobby-Hub -> Xamarin.Essentials (>= 1.5.3.2) \r\n HobbyHub.iOS -> Xamarin.Essentials (>= 1.3.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 4.8.0.1187-pre2 to 4.5.0.495. Reference the package directly from the project to select a different version. \r\n HobbyHub.iOS -> Hobby-Hub -> Xamarin.Forms (>= 4.8.0.1187-pre2) \r\n HobbyHub.iOS -> Xamarin.Forms (>= 4.5.0.495)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

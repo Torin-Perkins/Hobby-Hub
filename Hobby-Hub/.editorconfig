@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Metadata file 'C:\Users\tdmp4\Documents\GitHub\Hobby-Hub\Hobby-Hub\Hobby-Hub\Hobby-Hub\bin\Debug\netstandard2.0\ref\Hobby-Hub.dll' could not be found
+dotnet_diagnostic.CS0006.severity = none
