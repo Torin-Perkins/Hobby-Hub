@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {}
+    "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+    "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "projectUniqueName": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
         "projectName": "Hobby-Hub",
-        "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
         "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
+        "outputPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

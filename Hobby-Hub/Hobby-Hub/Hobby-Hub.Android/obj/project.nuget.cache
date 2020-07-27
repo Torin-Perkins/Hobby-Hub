@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZPMIOQ1OkTMOF1n5w3JyKiuaPEjLyX6vVMoR0C+3EMXn29h/Gu7AoQb0wDRMt+b3RkwLBwNdzOI2sv5EGWkDNg==",
+  "dgSpecHash": "BhESIYWY+x+F8AbiPiB8InmtYwlLi2j5+u065OOQDFzF4eblu1Uwqvdv/v5NmmwTn4dIUUgxf0r0uY70fx0rRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
+  "projectFilePath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bremm\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",

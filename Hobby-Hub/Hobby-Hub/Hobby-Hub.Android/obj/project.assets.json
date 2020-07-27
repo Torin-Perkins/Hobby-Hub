@@ -1975,11 +1975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
+      "projectUniqueName": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
       "projectName": "Hobby-Hub.Android",
-      "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
+      "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
       "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\obj\\",
+      "outputPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2000,8 +2000,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
-              "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
+            "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+              "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
             }
           }
         }

@@ -5,8 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Hobby_Hub.AppMasterDetailPageDetail"
-             Title="Home Page"
-             IconImageSource="homeButton">
+             Title="Home Page">
     
   <StackLayout Padding="10">
     <Label 

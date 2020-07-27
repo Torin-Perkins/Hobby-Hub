@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5MftTCNmV2943hOs1/azbpo92nlNGvvMLyXBRJzysFGW1F8KCEHIdlngCewMag4x5uidRgrXB1BWfBKcfrspEw==",
+  "dgSpecHash": "3CF4eQ2urfTw1My7kA72XufB2f0YDaBJnEIsTYo4RNVZrHIFtLWsdWl02+o/Q+8MEMz+rVpyNcl7sxQgM14uFw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+  "projectFilePath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bremm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\bremm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

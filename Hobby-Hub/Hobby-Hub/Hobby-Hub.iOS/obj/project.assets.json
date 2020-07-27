@@ -1051,11 +1051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
       "projectName": "Hobby-Hub.iOS",
-      "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
+      "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\Hobby-Hub.iOS.csproj",
       "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\obj\\",
+      "outputPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1076,8 +1076,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
-              "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
+            "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+              "projectPath": "C:\\Users\\bremm\\Source\\Repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
             }
           }
         }
