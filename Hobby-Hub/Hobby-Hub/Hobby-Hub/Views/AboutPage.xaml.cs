@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Hobby-Hub
+namespace Hobby_Hub
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 public partial class AboutPage : ContentPage

@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Hobby_Hub.Views;
 
 namespace Hobby_Hub
 {
@@ -10,7 +11,7 @@ namespace Hobby_Hub
         {
             InitializeComponent();
 
-            MainPage = new AppMasterDetailPage();
+            MainPage = new ArtPage();
         }
 
         protected override void OnStart()
