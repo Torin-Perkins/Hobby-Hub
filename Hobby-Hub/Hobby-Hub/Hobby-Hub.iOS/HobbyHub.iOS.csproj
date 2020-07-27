@@ -126,6 +126,9 @@
     <BundleResource Include="GoogleService-Info.plist" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Plugin.CloudFirestore">
+      <Version>3.1.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Firebase.iOS.CloudFirestore">
       <Version>1.12.0</Version>
     </PackageReference>

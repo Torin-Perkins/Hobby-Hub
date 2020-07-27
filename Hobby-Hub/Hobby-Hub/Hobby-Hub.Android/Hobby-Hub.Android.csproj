@@ -58,37 +58,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FirebaseDatabase.net">
-      <Version>4.0.4</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Browser">
-      <Version>1.2.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4">
-      <Version>1.0.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData">
-      <Version>2.2.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Common">
-      <Version>119.3.0-preview02</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Database">
-      <Version>119.3.0-preview02</Version>
+    <PackageReference Include="Plugin.CloudFirestore">
+      <Version>3.1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1187-pre2" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-    <PackageReference Include="Xamarin.Google.Android.Material">
-      <Version>1.1.0.1-rc3</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\.editorconfig">
@@ -124,6 +103,9 @@
       <Project>{A78C6621-48A8-4670-9F84-0B925C8A204B}</Project>
       <Name>Hobby-Hub</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

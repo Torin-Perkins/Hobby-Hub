@@ -1,12 +1,14 @@
 ﻿using Plugin.CloudFirestore;
+using Plugin.CloudFirestore.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HobbyHub.Models
 {
-    class Post
-{
+    class Post { 
+        [Id]
+        public string ID { get; set; }
         public string postID { get; set; }
         public string postedByUser { get; set; }
 

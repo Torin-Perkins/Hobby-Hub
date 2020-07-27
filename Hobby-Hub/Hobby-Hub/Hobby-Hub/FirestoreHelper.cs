@@ -2,6 +2,7 @@
 using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,14 +10,23 @@ using System.Threading.Tasks;
 namespace HobbyHub
 {
     class FirestoreHelper
-{
-        public async Task<object> queryPID(string poID)
+{   
+        public async void test(Post post)
         {
-            return await CrossCloudFirestore.Current
+            await CrossCloudFirestore.Current
+                           .Instance
+                           .GetCollection("Posts")
+                           .AddDocumentAsync(post);
+        }
+        public async Task<Object> queryPID(string poID)
+        {
+            var document = await CrossCloudFirestore.Current
                                      .Instance
                                      .GetCollection("Posts")
-                                     .WhereEqualsTo("postID", poID)
+                                     .WhereEqualsTo("postID", poID).LimitTo(1)
                                      .GetDocumentsAsync();
+            
+            return document;
         }
         public async Task<List<Post>> getMessages(string catiegory)
         {
@@ -24,7 +34,7 @@ namespace HobbyHub
                                      .Instance
                                      .GetCollection("Posts")
                                      .WhereEqualsTo("Catiegory", catiegory)
-                                     .OrderBy("date", true)
+   
                                      .GetDocumentsAsync();
             List<Post> posts = query.ToObjects<Post>().ToList();
             
