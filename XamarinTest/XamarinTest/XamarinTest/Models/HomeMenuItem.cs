@@ -7,7 +7,13 @@ namespace XamarinTest.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        Science, 
+        Engineering, 
+        Technology, 
+        Math, 
+        Art, 
+        Sports
     }
     public class HomeMenuItem
     {
