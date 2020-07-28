@@ -18,12 +18,12 @@ namespace Hobby_Hub
 	public partial class MainPage : ContentPage
 	{
 		FirestoreHelper fs = new FirestoreHelper();
-		string user = App.userID;
-		static string PostID;
+		
 		
 
 		public MainPage()
 		{
+			updateMessagesAsync();
 			//user = fs.generateUID();
 			InitializeComponent();
 		}
