@@ -30,6 +30,8 @@ namespace XamarinTest.Views
             {
                 switch (id)
                 {
+                    // TODO: change this back to about page
+                    // TODO: the default page should be about page not browse page
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;

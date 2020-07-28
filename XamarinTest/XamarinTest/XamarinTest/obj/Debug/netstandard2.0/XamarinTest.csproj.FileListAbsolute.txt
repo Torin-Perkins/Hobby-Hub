@@ -67,3 +67,4 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\ref\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.pdb
+C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\FeedDetail.xaml.g.cs

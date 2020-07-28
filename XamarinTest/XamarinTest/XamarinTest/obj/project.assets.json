@@ -604,23 +604,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\President's computer\\.nuget\\packages\\": {},
+    "C:\\Users\\tanvig22\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
+      "projectUniqueName": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
       "projectName": "XamarinTest",
-      "projectPath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
-      "packagesPath": "C:\\Users\\President's computer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\obj\\",
+      "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
+      "packagesPath": "C:\\Users\\tanvig22\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\President's computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tanvig22\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

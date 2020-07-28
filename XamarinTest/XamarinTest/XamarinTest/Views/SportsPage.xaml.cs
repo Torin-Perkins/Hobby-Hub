@@ -44,7 +44,8 @@ namespace XamarinTest.Views
         {
             var layout = (BindableObject)sender;
             var item = (Item)layout.BindingContext;
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            // NOTE: You can pass an id through this to read in the correct feed on the page
+            await Navigation.PushAsync(new FeedDetail(item.Text));
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)

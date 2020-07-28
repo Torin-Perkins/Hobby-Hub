@@ -1,2 +1,2 @@
-AdbTarget=-s ZY224CBT4W
+AdbTarget=-s emulator-5554
 AdbOptions=
