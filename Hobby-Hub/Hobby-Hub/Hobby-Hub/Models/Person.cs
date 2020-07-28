@@ -6,6 +6,7 @@ namespace HobbyHub.Models
 {
     class Person
     {
-        Guid guid {get; set;}
+        public string UID {get; set;}
+        public string PhoneName { get; set; }
 }
 }

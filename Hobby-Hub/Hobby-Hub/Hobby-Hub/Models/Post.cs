@@ -14,6 +14,6 @@ namespace HobbyHub.Models
 
         public DateTime date { get; set; }
         public string postText { get; set; }
-        public string catiegory { get; set; }
+        public string category { get; set; }
 }
 }

@@ -19,7 +19,7 @@ namespace HobbyHub
                            .GetCollection("Posts")
                            .AddDocumentAsync(post);
         }
-        public async Task<Object> queryPID(string poID)
+        public async Task<bool> queryPID(string poID)
         {
             var document = await CrossCloudFirestore.Current
                                      .Instance
@@ -27,23 +27,32 @@ namespace HobbyHub
                                      .WhereEqualsTo("postID", poID).LimitTo(1)
                                      .GetDocumentsAsync();
             
-            return document;
+            return document.IsEmpty;
         }
-        public async Task<object> queryUsers(string userID)
+        public async Task<bool> queryUsers(string userID)
         {
             var document = await CrossCloudFirestore.Current.
                 Instance.
                 GetCollection("Users").
                 WhereEqualsTo("UID", userID).
                 LimitTo(1).GetDocumentsAsync();
-            return document;
+            return document.IsEmpty;
         }
-        public async Task<List<Post>> getMessages(string catiegory)
+        public async Task<bool> queryDeviceName(string phoneName)
+        {
+            var document = await CrossCloudFirestore.Current.
+                Instance.
+                GetCollection("Users").
+                WhereEqualsTo("PhoneName", phoneName).
+                GetDocumentsAsync();
+            return document.IsEmpty;
+        }
+        public async Task<List<Post>> getMessages(string category)
         {
             var query = await CrossCloudFirestore.Current
                                      .Instance
                                      .GetCollection("Posts")
-                                     .WhereEqualsTo("catiegory", catiegory)
+                                     .WhereEqualsTo("category", category)
                                      .GetDocumentsAsync();
             System.Diagnostics.Debug.WriteLine("POSTS: " + query.ToObjects<Post>().ToList<Post>().First().postText);
             List<Post> posts = query.ToObjects<Post>().ToList<Post>();
@@ -53,5 +62,47 @@ namespace HobbyHub
            
             return posts;
         }
-}
+        private bool temp;
+        private async void checkUser(string userID)
+        {
+            temp = await queryUsers(userID);
+        }
+        public string generateUID(string phoneName)
+        {
+            Random rnd = new Random();
+            int[] numbers = new int[6];
+            string userID = "";
+
+            for (int i = 0; i < 6; i++)
+            {
+                userID += rnd.Next(10).ToString();
+            }
+            checkUser(userID);
+            if (!temp)
+            {
+
+                return generateUID(phoneName);
+            }
+            else
+            {
+                createNewUser(userID, phoneName);
+                return userID;
+            }
+        }
+        public async Task<Person>GetPerson(string deviceName)
+        {
+            var query = await CrossCloudFirestore.Current.Instance.
+                GetCollection("Users").
+                WhereEqualsTo("PhoneName", deviceName).LimitTo(1).
+                GetDocumentsAsync();
+             Person[]persons = query.ToObjects<Person>().ToArray();
+            return persons[0];
+        }
+        public async void createNewUser(string userID, string deviceName)
+        {
+            await CrossCloudFirestore.Current.Instance.GetCollection("Users").AddDocumentAsync(new Person { UID = userID, PhoneName = deviceName });
+        }
+
+
+    }
 }

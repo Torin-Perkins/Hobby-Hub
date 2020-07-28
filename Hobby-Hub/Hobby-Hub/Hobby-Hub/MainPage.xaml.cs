@@ -18,12 +18,13 @@ namespace Hobby_Hub
 	public partial class MainPage : ContentPage
 	{
 		FirestoreHelper fs = new FirestoreHelper();
-		string user;
+		string user = App.userID;
+		static string PostID;
 		
 
 		public MainPage()
 		{
-			user = generateUID();
+			//user = fs.generateUID();
 			InitializeComponent();
 		}
 
@@ -34,8 +35,8 @@ namespace Hobby_Hub
 				   await DisplayAlert("Error", "A Message is Required", "OK");
 				  return;
 			  }
-			
-			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = user, date =  DateTime.Now, postText = Message.Text + " -User#" + user,catiegory = "Test"};
+			//GeneratePostID();
+			  Post post = new Post() {ID = "FYTTH561", postID = GeneratePostID(), postedByUser = App.userID, date =  DateTime.Now, postText = Message.Text + " -User#" + App.userID,category = "Test"};
 			  fs.test(post);
 
 			// fs.test();
@@ -47,6 +48,12 @@ namespace Hobby_Hub
 		private bool IsFormValid() => IsNameValid();
 
 		private bool IsNameValid() => !string.IsNullOrWhiteSpace(Message.Text);
+
+		private bool temp;
+		private async void checkPID(String poID)
+        {
+			temp = await fs.queryPID(poID);
+        }
 		private string GeneratePostID()
 		{
 			Random rnd = new Random();
@@ -57,12 +64,11 @@ namespace Hobby_Hub
 			{
 				poID += rnd.Next(10).ToString();
 			}
-			var query = fs.queryPID(poID);
+			checkPID(poID);
 		   
-			System.Diagnostics.Debug.WriteLine(query.ToString());
-			if (query.ToString() != "System.Threading.Tasks.Task`1[System.Object]") 
-			{
-			   
+			System.Diagnostics.Debug.WriteLine(temp);
+			if (temp)
+			{ 
 				return GeneratePostID();
 			}
 			else
@@ -71,32 +77,13 @@ namespace Hobby_Hub
 			}
 
         }
+		
 		private async void updateMessagesAsync()
 		{
 			List<Post> allPosts = await fs.getMessages("Test");
 			System.Diagnostics.Debug.WriteLine(allPosts.First().ToString());
 			Msg.ItemsSource = allPosts;
 		}
-		private string generateUID()
-        {
-			Random rnd = new Random();
-			int[] numbers = new int[6];
-			string userID = "";
-
-			for (int i = 0; i < 6; i++)
-			{
-				userID += rnd.Next(10).ToString();
-			}
-			var query = fs.queryUsers(userID);
-			if (query.ToString() != "System.Threading.Tasks.Task`1[System.Object]")
-			{
-
-				return generateUID();
-			}
-			else
-			{
-				return userID;
-			}
-		}
+		
 	}
 }
