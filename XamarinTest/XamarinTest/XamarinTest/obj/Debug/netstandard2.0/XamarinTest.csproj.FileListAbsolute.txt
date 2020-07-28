@@ -42,3 +42,28 @@ C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest\obj
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\MathPage.xaml.g.cs
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\SportsPage.xaml.g.cs
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\TechnologyPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.deps.json
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\ref\XamarinTest.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.pdb
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.csprojAssemblyReference.cache
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\ArtPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\EngineeringPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\MathPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\SciencePage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\SportsPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\TechnologyPage.xaml.g.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.AssemblyInfoInputs.cache
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.AssemblyInfo.cs
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.csproj.CoreCompileInputs.cache
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\ref\XamarinTest.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.pdb

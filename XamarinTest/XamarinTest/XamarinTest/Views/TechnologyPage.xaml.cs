@@ -30,8 +30,8 @@ namespace XamarinTest.Views
             minItemList = new List<Item>()
             {
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Technology item", Description="This is a technology item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Technology item 2", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Technology item 3", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
