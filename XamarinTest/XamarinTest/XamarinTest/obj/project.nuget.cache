@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ELRE8Ix2/XlPGdipBQlsJmrbSq65qRAqN4hu67tIMOcsiYFxvxXqL3uHYIpWmFfJMNdS0dsT7O8jqr03HnfypA==",
+  "dgSpecHash": "X6rduHdgBiZALJu5AIoXpmw/wj6NcQYGrz92WRwAtAyjwTpRWbOnnqz4B23YN+UCBpx6sALH26qb5GJTaT/6lw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
+  "projectFilePath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\President's computer\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\President's computer\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\President's computer\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\bremm\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
   ],

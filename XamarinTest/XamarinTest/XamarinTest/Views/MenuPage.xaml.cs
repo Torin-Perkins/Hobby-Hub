@@ -20,13 +20,14 @@ namespace XamarinTest.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
-                new HomeMenuItem {Id = MenuItemType.Science, Title="Science" },
-                new HomeMenuItem {Id = MenuItemType.Technology, Title="Technology" },
+                new HomeMenuItem {Id = MenuItemType.Art, Title="Art" },
                 new HomeMenuItem {Id = MenuItemType.Engineering, Title="Engineering" },
                 new HomeMenuItem {Id = MenuItemType.Math, Title="Math" },
-                new HomeMenuItem {Id = MenuItemType.Art, Title="Art" },
-                new HomeMenuItem {Id = MenuItemType.Sports, Title="Sports" }
+                new HomeMenuItem {Id = MenuItemType.Science, Title="Science" },
+                new HomeMenuItem {Id = MenuItemType.Sports, Title="Sports" },
+                new HomeMenuItem {Id = MenuItemType.Technology, Title="Technology" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+
             };
 
             ListViewMenu.ItemsSource = menuItems;

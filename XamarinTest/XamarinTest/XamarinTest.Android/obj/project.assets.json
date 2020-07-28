@@ -1969,24 +1969,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\President's computer\\.nuget\\packages\\": {},
+    "C:\\Users\\bremm\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
+      "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
       "projectName": "XamarinTest.Android",
-      "projectPath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
-      "packagesPath": "C:\\Users\\President's computer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\obj\\",
+      "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
+      "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\President's computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bremm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2000,8 +2000,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
-              "projectPath": "C:\\Users\\President's computer\\NWAPW\\HobbyHub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
+            "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
+              "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
             }
           }
         }

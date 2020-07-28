@@ -17,7 +17,7 @@
                 ItemsSource="{Binding Items}">
             <d:CollectionView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>First Item</x:String>
+                    <x:String>textr Item</x:String>
                     <x:String>Second Item</x:String>
                     <x:String>Third Item</x:String>
                     <x:String>Fourth Item</x:String>

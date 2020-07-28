@@ -21,8 +21,8 @@ namespace XamarinTest.Views
 
             Item = new Item
             {
-                Text = "Item name",
-                Description = "This is an item description."
+                Text = "",
+                Description = ""
             };
 
             BindingContext = this;
@@ -30,8 +30,15 @@ namespace XamarinTest.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
-            await Navigation.PopModalAsync();
+            if (Item.Text != "" && Item.Description != "")
+            {
+                MessagingCenter.Send(this, "AddItem", Item);
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                await DisplayAlert("Error", "Either the Text field or the Description field are blank, a hobby cannot be created without a title or description.", "OK");
+            }
         }
 
         async void Cancel_Clicked(object sender, EventArgs e)

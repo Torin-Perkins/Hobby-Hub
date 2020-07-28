@@ -14,7 +14,7 @@ namespace XamarinTest
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new OpeningPage();
         }
 
         protected override void OnStart()

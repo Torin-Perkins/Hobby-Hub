@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj": {}
+    "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj": {
+    "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
+        "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
         "projectName": "Hobby-Hub.Android",
-        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
-        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\obj\\",
+        "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\Hobby-Hub.Android.csproj",
+        "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bremm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
-                "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
+              "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+                "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
+    "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "projectUniqueName": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
         "projectName": "Hobby-Hub",
-        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
-        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
+        "projectPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub.csproj",
+        "packagesPath": "C:\\Users\\bremm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bremm\\source\\repos\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\Hobby-Hub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bremm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
