@@ -13,6 +13,8 @@ using Xamarin.Forms.Xaml;
 using XamarinTest.Models;
 using XamarinTest.Views;
 using XamarinTest.ViewModels;
+using XamarinTest.Helpers;
+using Xamarin.Forms.Internals;
 
 namespace XamarinTest.Views
 {
@@ -22,28 +24,40 @@ namespace XamarinTest.Views
     public partial class EngineeringPage : ContentPage
     {
         ItemsViewModel viewModel;
-        List<Item> minItemList;
+        List<Hobby> minItemList = new List<Hobby>();
+        FirestoreHelper firestoreHelper = new FirestoreHelper("Engineering");
         public EngineeringPage()
         {
             InitializeComponent();
+            // FirestoreHelper firestoreHelper = new FirestoreHelper();
+            /*
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Electrical Engineering", Description = "This is an engineering item description.", ParentCategory = "Engineering" });
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Chemical Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Mechanical Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Civil Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Automotive Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
+             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Agricultural Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
+ */
 
-            minItemList = new List<Item>()
-            {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Engineering item", Description="This is an engineering item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
-            };
-            BindingContext = viewModel = new ItemsViewModel("Engineering", minItemList);
+            //  firestoreHelper.GetHobbiesByParentVoid("Engineering");
+           // GetMinList();
 
+           System.Diagnostics.Debug.WriteLine("MinList: " + FirestoreHelper.hobbies.Count);
+            /* new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Electrical Engineering", Description="This is an engineering item description.", ParentCategory = "Engineering"},
+             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Chemical Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
+             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Mechanical Engineering", Description="This is an item description." , ParentCategory = "Engineering"},
+             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Civil Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
+             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Automotive Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
+             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Agricultural Engineering", Description="This is an item description.", ParentCategory = "Engineering" }*/
+
+
+            BindingContext = viewModel = new ItemsViewModel("Engineering", FirestoreHelper.hobbies);
         }
 
         async void OnItemSelected(object sender, EventArgs args)
         {
             var layout = (BindableObject)sender;
-            var item = (Item)layout.BindingContext;
+            var item = (Hobby)layout.BindingContext;
             await Navigation.PushAsync(new FeedDetail(item.Text));
         }
 
@@ -59,5 +73,7 @@ namespace XamarinTest.Views
             if (viewModel.Items.Count == 0)
                 viewModel.IsBusy = true;
         }
+        
+        
     }
 }

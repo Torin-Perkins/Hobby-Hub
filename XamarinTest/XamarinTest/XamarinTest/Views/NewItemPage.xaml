@@ -18,6 +18,8 @@
             <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
             <Label Text="Description" FontSize="Medium" />
             <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
+            <Label Text="Category" FontSize="Medium" />
+            <Editor Text="{Binding Item.ParentCategory}" d:Text="Category" FontSize="Small" Margin="0" />
         </StackLayout>
     </ContentPage.Content>
     

@@ -89,6 +89,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
+    <GoogleServicesJson Include="google-services.json" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Hobby-Hub\Hobby-Hub.csproj">
       <Project>{A78C6621-48A8-4670-9F84-0B925C8A204B}</Project>
       <Name>Hobby-Hub</Name>

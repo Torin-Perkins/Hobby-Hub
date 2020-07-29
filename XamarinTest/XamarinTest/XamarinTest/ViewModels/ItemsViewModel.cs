@@ -13,32 +13,32 @@ namespace XamarinTest.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Hobby> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Hobby>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Hobby>(this, "AddItem", async (obj, item) =>
             {
-                var newItem = item as Item;
+                var newItem = item as Hobby;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
             });
         }
 
-        public ItemsViewModel(String pageTitle, List<Item> itemsToLoad)
+        public ItemsViewModel(String pageTitle, List<Hobby> itemsToLoad)
         {
             Title = pageTitle;
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Hobby>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand(itemsToLoad));
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<NewItemPage, Hobby>(this, "AddItem", async (obj, item) =>
             {
-                var newItem = item as Item;
+                var newItem = item as Hobby;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
             });
@@ -67,7 +67,7 @@ namespace XamarinTest.ViewModels
             }
         }
 
-        async Task ExecuteLoadItemsCommand(List<Item> toLoad)
+        async Task ExecuteLoadItemsCommand(List<Hobby> toLoad)
         {
             IsBusy = true;
 

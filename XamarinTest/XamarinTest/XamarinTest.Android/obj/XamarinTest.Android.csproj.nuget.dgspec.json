@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj": {}
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj": {
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
+        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
         "projectName": "XamarinTest.Android",
-        "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
-        "packagesPath": "C:\\Users\\tanvig22\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\obj\\",
+        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\XamarinTest.Android.csproj",
+        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tanvig22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
-                "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
+              "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
+                "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "monoandroid90": {
           "dependencies": {
+            "Plugin.CloudFirestore": {
+              "target": "Package",
+              "version": "[3.1.0.2, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -54,20 +58,20 @@
         }
       }
     },
-    "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
+    "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
+        "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
         "projectName": "XamarinTest",
-        "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
-        "packagesPath": "C:\\Users\\tanvig22\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\obj\\",
+        "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj",
+        "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\tanvig22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -97,6 +101,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Plugin.CloudFirestore": {
+              "target": "Package",
+              "version": "[3.1.0.2, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

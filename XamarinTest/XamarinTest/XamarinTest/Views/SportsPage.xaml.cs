@@ -13,6 +13,7 @@ using Xamarin.Forms.Xaml;
 using XamarinTest.Models;
 using XamarinTest.Views;
 using XamarinTest.ViewModels;
+using XamarinTest.Helpers;
 
 namespace XamarinTest.Views
 {
@@ -22,20 +23,28 @@ namespace XamarinTest.Views
     public partial class SportsPage : ContentPage
     {
         ItemsViewModel viewModel;
-        List<Item> minItemList;
+        List<Hobby> minItemList;
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         public SportsPage()
         {
             InitializeComponent();
+            /* firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Soccer", Description = "This is a sports item description.", ParentCategory = "Sports" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Football", Description = "This is an item description.", ParentCategory = "Sports" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Basketball", Description = "This is an item description.", ParentCategory = "Sports" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Baseball/Softball", Description = "This is an item description.", ParentCategory = "Sports" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Track/Cross Country", Description = "This is an item description.", ParentCategory = "Sports" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Swimming", Description = "This is an item description.", ParentCategory = "Sports" });
 
-            minItemList = new List<Item>()
-            {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sports item", Description="This is a sports item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
-            };
+            minItemList = new List<Hobby>()
+             {
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Soccer", Description="This is a sports item description.", ParentCategory = "Sports" },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Basket Ball", Description="This is an item description.", ParentCategory = "Sports" },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Third item", Description="This is an item description." , ParentCategory = "Sports"},
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Fourth item", Description="This is an item description." , ParentCategory = "Sports"},
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Fifth item", Description="This is an item description." , ParentCategory = "Sports"},
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Sixth item", Description="This is an item description." , ParentCategory = "Sports"}
+             };*/
+            GetMinList();
             BindingContext = viewModel = new ItemsViewModel("Sports", minItemList);
 
         }
@@ -43,7 +52,7 @@ namespace XamarinTest.Views
         async void OnItemSelected(object sender, EventArgs args)
         {
             var layout = (BindableObject)sender;
-            var item = (Item)layout.BindingContext;
+            var item = (Hobby)layout.BindingContext;
             // NOTE: You can pass an id through this to read in the correct feed on the page
             await Navigation.PushAsync(new FeedDetail(item.Text));
         }
@@ -59,6 +68,11 @@ namespace XamarinTest.Views
 
             if (viewModel.Items.Count == 0)
                 viewModel.IsBusy = true;
+        }
+        public async void GetMinList()
+        {
+            string input = "Sports";
+            minItemList = await firestoreHelper.GetHobbiesByParent(input);
         }
     }
 }

@@ -2,26 +2,45 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using XamarinTest.Helpers;
 using XamarinTest.Models;
 
 namespace XamarinTest.Views
 {
+
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
+        public static string UserID;
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
         public MainPage()
         {
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-
+            checkUsers();
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+        }
+        public async void checkUsers()
+        {
+            var query = await firestoreHelper.QueryDeviceModel(DeviceInfo.Model.ToString());
+
+            System.Diagnostics.Debug.WriteLine("yes: " + query);
+            if (!query)
+            {
+                User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
+                UserID = user.UserID;
+            }
+            else
+            {
+                UserID = firestoreHelper.GenerateUserID(DeviceInfo.Model.ToString());
+            }
         }
 
         public async Task NavigateFromMenu(int id)

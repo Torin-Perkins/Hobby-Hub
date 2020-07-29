@@ -9,15 +9,13 @@
     
     <StackLayout>
         <ListView VerticalOptions="StartAndExpand" 
-                  x:Name="Msg" 
-                  
-                  >
+                  x:Name="Msg">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell 
                         TextColor="Black"
-                        Text="{Binding postText}" >
+                        Text="{Binding PostText}" >
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

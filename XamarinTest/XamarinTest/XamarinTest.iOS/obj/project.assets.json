@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Plugin.CloudFirestore/3.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.3.2",
+          "Xamarin.Firebase.iOS.CloudFirestore": "1.12.0"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -9,6 +22,45 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1/_._": {},
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -24,6 +76,40 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.6.6"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.6.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
       "Xamarin.Forms/4.5.0.495": {
@@ -151,6 +237,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.CloudFirestore": "3.1.0.2",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.5.0.495"
         },
@@ -163,6 +250,19 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Plugin.CloudFirestore/3.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.3.2",
+          "Xamarin.Firebase.iOS.CloudFirestore": "1.12.0"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -170,6 +270,45 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1/_._": {},
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -185,6 +324,40 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.6.6"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.6.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
       "Xamarin.Forms/4.5.0.495": {
@@ -312,6 +485,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.CloudFirestore": "3.1.0.2",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.5.0.495"
         },
@@ -324,6 +498,19 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Plugin.CloudFirestore/3.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.3.2",
+          "Xamarin.Firebase.iOS.CloudFirestore": "1.12.0"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -331,6 +518,45 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1/_._": {},
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -346,6 +572,40 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.6.6"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.6.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
       "Xamarin.Forms/4.5.0.495": {
@@ -473,6 +733,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.CloudFirestore": "3.1.0.2",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.5.0.495"
         },
@@ -485,6 +746,19 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Plugin.CloudFirestore/3.1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "4.3.2",
+          "Xamarin.Firebase.iOS.CloudFirestore": "1.12.0"
+        },
+        "compile": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Plugin.CloudFirestore.dll": {}
+        }
+      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -492,6 +766,45 @@
         },
         "runtime": {
           "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Reactive/4.3.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {}
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios1/_._": {},
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
+        }
+      },
+      "Xamarin.Build.Download/0.10.0": {
+        "type": "package",
+        "build": {
+          "buildTransitive/Xamarin.Build.Download.props": {},
+          "buildTransitive/Xamarin.Build.Download.targets": {}
         }
       },
       "Xamarin.Essentials/1.3.1": {
@@ -507,6 +820,40 @@
         },
         "runtime": {
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.CloudFirestore/1.12.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0",
+          "Xamarin.Firebase.iOS.Core": "6.6.6"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.CloudFirestore.dll": {}
+        }
+      },
+      "Xamarin.Firebase.iOS.Core/6.6.6": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.10.0"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Firebase.Core.dll": {}
+        },
+        "build": {
+          "buildTransitive/Xamarin.Firebase.iOS.Core.targets": {}
         }
       },
       "Xamarin.Forms/4.5.0.495": {
@@ -634,6 +981,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.CloudFirestore": "3.1.0.2",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.5.0.495"
         },
@@ -647,6 +995,25 @@
     }
   },
   "libraries": {
+    "Plugin.CloudFirestore/3.1.0.2": {
+      "sha512": "vBXXEuX3eISMf0ICNQywNZ21VA9QXMG6+x0GvCvIN48qOpbcekoA7+vEwguMDZgE5iPd/OD6opT5Bjj+CUdBuw==",
+      "type": "package",
+      "path": "plugin.cloudfirestore/3.1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/monoandroid90/Plugin.CloudFirestore.targets",
+        "lib/monoandroid90/FirebaseFirestore.Binding.dll",
+        "lib/monoandroid90/Plugin.CloudFirestore.dll",
+        "lib/monoandroid90/Plugin.CloudFirestore.xml",
+        "lib/netstandard2.0/Plugin.CloudFirestore.dll",
+        "lib/netstandard2.0/Plugin.CloudFirestore.xml",
+        "lib/xamarinios10/Plugin.CloudFirestore.dll",
+        "lib/xamarinios10/Plugin.CloudFirestore.xml",
+        "plugin.cloudfirestore.3.1.0.2.nupkg.sha512",
+        "plugin.cloudfirestore.nuspec"
+      ]
+    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -692,6 +1059,150 @@
         "system.numerics.vectors.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Reactive/4.3.2": {
+      "sha512": "WhGkScPWxw2pp7UwRW8M1OvYZ3WUDPC2wJ0aiuaB4KRD3bt4wLkgHgYnOUu87WRhsurvv5LN0E63iWOEza2o8g==",
+      "type": "package",
+      "path": "system.reactive/4.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netcoreapp3.0/System.Reactive.dll",
+        "build/netcoreapp3.0/System.Reactive.targets",
+        "build/netcoreapp3.0/System.Reactive.xml",
+        "buildTransitive/netcoreapp3.0/System.Reactive.targets",
+        "lib/net46/System.Reactive.dll",
+        "lib/net46/System.Reactive.xml",
+        "lib/netcoreapp3.0/_._",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "lib/uap10.0/System.Reactive.dll",
+        "lib/uap10.0/System.Reactive.pri",
+        "lib/uap10.0/System.Reactive.xml",
+        "system.reactive.4.3.2.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "sha512": "J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "type": "package",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios1/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netcore50/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netcore50/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "ref/netstandard1.0/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/de/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/es/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/fr/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/it/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ja/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ko/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/ru/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.InteropServices.WindowsRuntime.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Runtime.InteropServices.WindowsRuntime.dll",
+        "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+        "system.runtime.interopservices.windowsruntime.nuspec"
+      ]
+    },
+    "System.Threading.Tasks.Extensions/4.5.3": {
+      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Xamarin.Build.Download/0.10.0": {
+      "sha512": "XiQNxx6Jox00O80sJRlZv6jXDZ/r3KC7SMwzQNQcD1gZ+vsZyJH3LcSpdJ5NiZhRrWZlTGNSbooHsOBF7lBOyQ==",
+      "type": "package",
+      "path": "xamarin.build.download/0.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICE.txt",
+        "build/Microsoft.Win32.Registry.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "buildTransitive/Microsoft.Win32.Registry.dll",
+        "buildTransitive/Newtonsoft.Json.dll",
+        "buildTransitive/Xamarin.Build.Download.dll",
+        "buildTransitive/Xamarin.Build.Download.props",
+        "buildTransitive/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.10.0.nupkg.sha512",
+        "xamarin.build.download.nuspec"
       ]
     },
     "Xamarin.Essentials/1.3.1": {
@@ -744,6 +1255,38 @@
         "readme.txt",
         "xamarin.essentials.1.3.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.CloudFirestore/1.12.0": {
+      "sha512": "Ulp318b0+rtaTx8Y+G4+zsLxxmyC2dBt8D7fT8d06wIXtMalLhqAkVcjezYa4kU9ICjI4lnkTv+U99Fa0XdGuA==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.cloudfirestore/1.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "firebaseioscloudfirestore_128x128.png",
+        "lib/xamarinios10/Firebase.CloudFirestore.dll",
+        "xamarin.firebase.ios.cloudfirestore.1.12.0.nupkg.sha512",
+        "xamarin.firebase.ios.cloudfirestore.nuspec"
+      ]
+    },
+    "Xamarin.Firebase.iOS.Core/6.6.6": {
+      "sha512": "GM43jhKOjzs2AwTNxPA3OFW/UVAM7oBWfYn0m9c56oOAAlPdpO7LebWXkLNa/vcFv9gtfCBrVVl+QIk8miwTDw==",
+      "type": "package",
+      "path": "xamarin.firebase.ios.core/6.6.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Xamarin.Firebase.iOS.Core.targets",
+        "buildTransitive/Xamarin.Firebase.iOS.Core.targets",
+        "firebaseioscore_128x128.png",
+        "lib/xamarinios10/Firebase.Core.dll",
+        "xamarin.firebase.ios.core.6.6.6.nupkg.sha512",
+        "xamarin.firebase.ios.core.nuspec"
       ]
     },
     "Xamarin.Forms/4.5.0.495": {
@@ -1039,30 +1582,33 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Plugin.CloudFirestore >= 3.1.0.2",
       "Xamarin.Essentials >= 1.3.1",
+      "Xamarin.Firebase.iOS.CloudFirestore >= 1.12.0",
+      "Xamarin.Firebase.iOS.Core >= 6.6.6",
       "Xamarin.Forms >= 4.5.0.495",
       "XamarinTest >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tanvig22\\.nuget\\packages\\": {},
+    "C:\\Users\\tdmp4\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\XamarinTest.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\XamarinTest.iOS.csproj",
       "projectName": "XamarinTest.iOS",
-      "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\XamarinTest.iOS.csproj",
-      "packagesPath": "C:\\Users\\tanvig22\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\obj\\",
+      "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\XamarinTest.iOS.csproj",
+      "packagesPath": "C:\\Users\\tdmp4\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\tanvig22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tdmp4\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1076,8 +1622,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
-              "projectPath": "C:\\Users\\tanvig22\\source\\repos\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
+            "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj": {
+              "projectPath": "C:\\Users\\tdmp4\\Documents\\GitHub\\Hobby-Hub\\XamarinTest\\XamarinTest\\XamarinTest\\XamarinTest.csproj"
             }
           }
         }
@@ -1086,9 +1632,21 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Plugin.CloudFirestore": {
+            "target": "Package",
+            "version": "[3.1.0.2, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.3.1, )"
+          },
+          "Xamarin.Firebase.iOS.CloudFirestore": {
+            "target": "Package",
+            "version": "[1.12.0, )"
+          },
+          "Xamarin.Firebase.iOS.Core": {
+            "target": "Package",
+            "version": "[6.6.6, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

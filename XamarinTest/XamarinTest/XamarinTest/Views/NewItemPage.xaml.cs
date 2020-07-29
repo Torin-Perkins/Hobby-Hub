@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using XamarinTest.Helpers;
 using XamarinTest.Models;
 
 namespace XamarinTest.Views
@@ -13,16 +13,18 @@ namespace XamarinTest.Views
     [DesignTimeVisible(false)]
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
-
+        public Hobby Item { get; set; }
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         public NewItemPage()
         {
             InitializeComponent();
 
-            Item = new Item
+            Item = new Hobby
             {
                 Text = "Item name",
-                Description = "This is an item description."
+                Description = "This is an item description.",
+                Id = firestoreHelper.GenerateHobbyID(),
+                ParentCategory = "The category it is in"
             };
 
             BindingContext = this;
@@ -30,7 +32,8 @@ namespace XamarinTest.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-            MessagingCenter.Send(this, "AddItem", Item);
+           // MessagingCenter.Send(this, "AddItem", Item);
+            firestoreHelper.CreateNewHobby(Item);
             await Navigation.PopModalAsync();
         }
 

@@ -13,6 +13,7 @@ using Xamarin.Forms.Xaml;
 using XamarinTest.Models;
 using XamarinTest.Views;
 using XamarinTest.ViewModels;
+using XamarinTest.Helpers;
 
 namespace XamarinTest.Views
 {
@@ -22,20 +23,28 @@ namespace XamarinTest.Views
     public partial class ArtPage : ContentPage
     {
         ItemsViewModel viewModel;
-        List<Item> minItemList;
+        List<Hobby> minItemList;
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         public ArtPage()
         {
             InitializeComponent();
-
-            minItemList = new List<Item>()
-            {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Art item", Description="This is an art item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
-            };
+            /*
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Painting", Description = "This is an art item description.", ParentCategory = "Art" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Stained Glass", Description = "This is an item description.", ParentCategory = "Art" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Pottery", Description = "This is an item description.", ParentCategory = "Art" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Drawing", Description = "This is an item description.", ParentCategory = "Art" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "IRL Art", Description = "This is an item description.", ParentCategory = "Art" });
+            firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Tiles", Description = "This is an item description.", ParentCategory = "Art" });
+             minItemList = new List<Hobby>()
+             {
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Painting", Description="This is an art item description.", ParentCategory = "Art" },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Stained Glass", Description="This is an item description.", ParentCategory = "Art"  },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Pottery", Description="This is an item description.", ParentCategory = "Art"  },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Drawing", Description="This is an item description.", ParentCategory = "Art"  },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "IRL Art", Description="This is an item description.", ParentCategory = "Art"  },
+                 new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Tiles", Description="This is an item description.", ParentCategory = "Art"  }
+             };*/
+            GetMinList();
             BindingContext = viewModel = new ItemsViewModel("Art", minItemList);
 
         }
@@ -43,7 +52,7 @@ namespace XamarinTest.Views
         async void OnItemSelected(object sender, EventArgs args)
         {
             var layout = (BindableObject)sender;
-            var item = (Item)layout.BindingContext;
+            var item = (Hobby)layout.BindingContext;
             await Navigation.PushAsync(new FeedDetail(item.Text));
         }
 
@@ -58,6 +67,11 @@ namespace XamarinTest.Views
 
             if (viewModel.Items.Count == 0)
                 viewModel.IsBusy = true;
+        }
+        public async void GetMinList()
+        {
+            string input = "Art";
+            minItemList = await firestoreHelper.GetHobbiesByParent(input);
         }
     }
 }
