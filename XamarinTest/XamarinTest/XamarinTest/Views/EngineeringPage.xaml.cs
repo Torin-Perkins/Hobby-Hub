@@ -40,9 +40,9 @@ namespace XamarinTest.Views
  */
 
             //  firestoreHelper.GetHobbiesByParentVoid("Engineering");
-           // GetMinList();
-
-           System.Diagnostics.Debug.WriteLine("MinList: " + FirestoreHelper.hobbies.Count);
+            // GetMinList();
+          //  Task.Run(async () => { await firestoreHelper.GetHobbiesByParentVoid("Engineering"); }).Wait();
+          //  System.Diagnostics.Debug.WriteLine("MinList: " + firestoreHelper.hobbies.Count);
             /* new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Electrical Engineering", Description="This is an engineering item description.", ParentCategory = "Engineering"},
              new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Chemical Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
              new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Mechanical Engineering", Description="This is an item description." , ParentCategory = "Engineering"},
@@ -51,7 +51,7 @@ namespace XamarinTest.Views
              new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Agricultural Engineering", Description="This is an item description.", ParentCategory = "Engineering" }*/
 
 
-            BindingContext = viewModel = new ItemsViewModel("Engineering", FirestoreHelper.hobbies);
+            BindingContext = viewModel = new ItemsViewModel("Engineering");
         }
 
         async void OnItemSelected(object sender, EventArgs args)

@@ -19,7 +19,7 @@ namespace XamarinTest.Views
         public FeedDetail()
         {
             InitializeComponent();
-            updateMessagesAsync();
+            //updateMessagesAsync();
         }
         
         public FeedDetail(String pageName)
@@ -39,17 +39,21 @@ namespace XamarinTest.Views
                 new Post
                 {
                     PostID = firestoreHelper.GeneratePostID(),
-                    PostedByUser = App.UserID,
+                    PostedByUser = MainPage.UserID,
                     DatePosted = DateTime.Now,
                     PostText = Message.Text + " -User#" + MainPage.UserID,
                     ParentCategory = category
                 });
+            Message.Text = "";
             updateMessagesAsync();
 		}
         private async void updateMessagesAsync()
         {
-            List<Post> allPosts = await firestoreHelper.getMessages(category);
-            Msg.ItemsSource = allPosts;
+            if (!(await firestoreHelper.QueryPostByCategory(Title)))
+            {
+                List<Post> allPosts = await firestoreHelper.getMessages(category);
+                Msg.ItemsSource = allPosts;
+            }
         }
         private bool IsFormValid() => IsNameValid();
         private bool IsNameValid() => !string.IsNullOrWhiteSpace(Message.Text);

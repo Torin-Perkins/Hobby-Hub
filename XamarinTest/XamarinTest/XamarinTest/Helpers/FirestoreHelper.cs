@@ -10,14 +10,14 @@ namespace XamarinTest.Helpers
 {
 	class FirestoreHelper
 	{
-		public static List<Hobby> hobbies;
+		public List<Hobby> hobbies;
 		public FirestoreHelper()
         {
 
         }
 		public FirestoreHelper(string category)
         {
-			GetHobbiesByParentVoid(category);
+			//GetHobbiesByParentVoid(category);
         }
 		public async void AddPost(Post post)
 		{
@@ -50,6 +50,17 @@ namespace XamarinTest.Helpers
 				Instance.
 				GetCollection("Users").
 				WhereEqualsTo("UserID", UserID).
+				GetDocumentsAsync();
+
+			return document.IsEmpty;
+		}
+		public async Task<bool> QueryPostByCategory(string ParentCategory)
+        {
+			var document = await CrossCloudFirestore.
+				Current.
+				Instance.
+				GetCollection("Posts").
+				WhereEqualsTo("ParentCategory", ParentCategory).
 				GetDocumentsAsync();
 
 			return document.IsEmpty;
@@ -133,7 +144,7 @@ namespace XamarinTest.Helpers
 
 			return hobbies;
         }
-		public async void GetHobbiesByParentVoid(string ParentCategory)
+		public async Task GetHobbiesByParentVoid(string ParentCategory)
 		{
 			var query = await CrossCloudFirestore.
 				Current.

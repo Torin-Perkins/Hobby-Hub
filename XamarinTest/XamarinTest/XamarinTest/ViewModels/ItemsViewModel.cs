@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-
+using XamarinTest.Helpers;
 using XamarinTest.Models;
 using XamarinTest.Views;
 
@@ -15,7 +15,7 @@ namespace XamarinTest.ViewModels
     {
         public ObservableCollection<Hobby> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
-
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         public ItemsViewModel()
         {
             Title = "Browse";
@@ -30,11 +30,11 @@ namespace XamarinTest.ViewModels
             });
         }
 
-        public ItemsViewModel(String pageTitle, List<Hobby> itemsToLoad)
+        public ItemsViewModel(String pageTitle)
         {
             Title = pageTitle;
             Items = new ObservableCollection<Hobby>();
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand(itemsToLoad));
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<NewItemPage, Hobby>(this, "AddItem", async (obj, item) =>
             {
@@ -51,7 +51,7 @@ namespace XamarinTest.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await firestoreHelper.GetHobbiesByParent(Title);
                 foreach (var item in items)
                 {
                     Items.Add(item);

@@ -44,8 +44,8 @@ namespace XamarinTest.Views
                  new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "IRL Art", Description="This is an item description.", ParentCategory = "Art"  },
                  new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Tiles", Description="This is an item description.", ParentCategory = "Art"  }
              };*/
-            GetMinList();
-            BindingContext = viewModel = new ItemsViewModel("Art", minItemList);
+         //   GetMinList();
+            BindingContext = viewModel = new ItemsViewModel("Art");
 
         }
 
