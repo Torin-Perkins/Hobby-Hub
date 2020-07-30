@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTest.Views.AboutPage"
+             xmlns:vm="clr-namespace:XamarinTest.ViewModels"
+             Title="{Binding Title}">
+    
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="Start" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout VerticalOptions="StartAndExpand" Orientation="Vertical" Padding="16,20,16,20" Spacing="10" HorizontalOptions="CenterAndExpand">
+                <Label FontSize="22">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Hobby Hub" FontAttributes="Bold" FontSize="22" />
+                                <Span Text=" " />
+                                <Span Text="v1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Welcome to Hobby Hub! Hobby Hub's goal is to connect people based on their hobbies and interests! 'Hobbies' are organized under a set number of broad categories. Users can add new hobbies to existing categories and conduct chats to share tips, ideas, resources, etc... amongst these groups!"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Hobby Hub is written in C# and native APIs using the" />
+                                <Span Text=" " />
+                                <Span Text="Xamarin Platform" FontAttributes="Bold" />
+                                <Span Text="." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="It shares the same source code with its" />
+                                <Span Text=" " />
+                                <Span Text="iOS, Android, and Windows" FontAttributes="Bold" />
+                                <Span Text=" " />
+                                <Span Text="versions." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Hobby Hub was developed by Scott Bremmer, Tanvi Ganapathy, Torin Perkins, and Nividh Singh for the"/>
+                                <Span Text=" " />
+                                <Span Text="Northwest Advanced Programming Workshop (NWAPW)" FontAttributes="Bold"/>
+                                <Span Text=" " />
+                                <Span Text="in the summer of 2020." />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                
+                <Button Margin="20,10,20,0" Text="Learn more about Xamarin"
+                        Command="{Binding OpenXamCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                
+                <Button Margin="20,10,20,0" Text="Our GitHub Repository"
+                        Command="{Binding OpenGitCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+            
+        </ScrollView>
+    </Grid>
+    
+</ContentPage>

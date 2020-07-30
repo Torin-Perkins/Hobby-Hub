@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTest.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="Start" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="10,20,10,20" VerticalOptions="FillAndExpand">
+                    <Label Text="Categories" FontAttributes="Bold" FontSize="30"/>
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout VerticalOptions="CenterAndExpand" 
+                         Orientation="Vertical" 
+                         Padding="16,20,16,20" 
+                         Spacing="30" 
+                         HorizontalOptions="Fill">
+
+
+
+                <Button Margin="20,5,20,0" Text="Art Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                <Button Margin="20,5,20,0" Text="Engineering Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                <Button Margin="20,5,20,0" Text="Math Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                <Button Margin="20,5,20,0" Text="Science Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                <Button Margin="20,5,20,0" Text="Sports Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                <Button Margin="20,10,20,0" Text="Tech Hobbies"
+                        Clicked ="OnArtClicked"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" 
+                        HeightRequest="80"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
