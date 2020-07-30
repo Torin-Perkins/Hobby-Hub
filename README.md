@@ -12,3 +12,4 @@ Installation instructions:
 
 Notes:
 Hobby Hub is a cross-platform app built with Xamarin. The app can theoreticaly be run on iOS, but has only been tested on Android devices.
+Loading new hobbies and new chats is slow as of the end of Sprint 2
