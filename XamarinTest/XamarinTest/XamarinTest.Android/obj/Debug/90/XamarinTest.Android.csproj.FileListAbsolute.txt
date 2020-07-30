@@ -952,14 +952,6 @@ C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest.And
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\tanvig22\source\repos\Hobby-Hub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.Android.dll
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.Android.pdb
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest.apk
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest.aab
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest-Signed.aab
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest-Signed.apk
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.dll
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.pdb
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\build.props
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\adb.props
@@ -990,9 +982,16 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\flata\34799118A4B902F5.flata
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\flata\703DFED1B1B91FCD.flata
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\flata\compiled.flata
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\R.txt
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\R.cs.flag
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\XamarinTest.Android.csproj.CoreCompileInputs.cache
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.Android.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.Android.pdb
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest.apk
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest.aab
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest-Signed.aab
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\com.companyname.xamarintest-Signed.apk
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.dll
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\bin\Debug\XamarinTest.pdb
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\XamlC.stamp
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\XamarinTest.Android.csproj.CopyComplete
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\XamarinTest.Android.dll
@@ -1018,6 +1017,7 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\xamarin_logo.png
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\R.txt
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\uploadflags.txt
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
@@ -1347,6 +1347,7 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SingleLocationListener.java
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a75f8f588679dd71\MainActivity.java
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a75f8f588679dd71\SplashActivity.java
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ButtonRenderer.java
@@ -1429,3 +1430,10 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\splashscreen.png
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\science.png
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\art.jpg
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\engineering.png
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\math.jpg
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\sports.jpg
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest.Android\obj\Debug\90\res\drawable\technology.png

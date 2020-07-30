@@ -46,7 +46,6 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\ref\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\bin\Debug\netstandard2.0\XamarinTest.pdb
-C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.csprojAssemblyReference.cache
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\Views\ArtPage.xaml.g.cs
@@ -67,3 +66,4 @@ C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\ref\XamarinTest.dll
 C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.pdb
+C:\Users\President's computer\NWAPW\HobbyHub\XamarinTest\XamarinTest\XamarinTest\obj\Debug\netstandard2.0\XamarinTest.csprojAssemblyReference.cache
