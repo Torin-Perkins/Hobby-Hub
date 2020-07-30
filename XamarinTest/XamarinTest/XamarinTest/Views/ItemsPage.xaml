@@ -48,7 +48,7 @@
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Engineering Hobbies"
-                        Clicked ="OnArtClicked"
+                        Clicked ="OnEngineeringClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
                         HeightRequest="80"
@@ -56,7 +56,7 @@
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Math Hobbies"
-                        Clicked ="OnArtClicked"
+                        Clicked ="OnMathClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
                         HeightRequest="80"
@@ -64,7 +64,7 @@
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Science Hobbies"
-                        Clicked ="OnArtClicked"
+                        Clicked ="OnScienceClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
                         HeightRequest="80"
@@ -72,7 +72,7 @@
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Sports Hobbies"
-                        Clicked ="OnArtClicked"
+                        Clicked ="OnSportsClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
                         HeightRequest="80"
@@ -80,7 +80,7 @@
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,10,20,0" Text="Tech Hobbies"
-                        Clicked ="OnArtClicked"
+                        Clicked ="OnTechClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
                         HeightRequest="80"
