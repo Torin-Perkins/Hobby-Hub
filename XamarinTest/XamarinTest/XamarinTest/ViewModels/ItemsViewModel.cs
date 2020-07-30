@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using XamarinTest.Helpers;
+
 using XamarinTest.Models;
 using XamarinTest.Views;
 
