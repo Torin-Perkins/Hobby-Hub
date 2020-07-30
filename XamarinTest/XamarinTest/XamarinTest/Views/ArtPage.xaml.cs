@@ -26,6 +26,7 @@ namespace XamarinTest.Views
         public ArtPage()
         {
             InitializeComponent();
+            
 
             minItemList = new List<Item>()
             {

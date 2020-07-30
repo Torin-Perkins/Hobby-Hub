@@ -40,7 +40,7 @@
                             <FormattedString.Spans>
                                 <Span Text="Hobby Hub" FontAttributes="Bold" FontSize="22" />
                                 <Span Text=" " />
-                                <Span Text="v0.1" ForegroundColor="{StaticResource LightTextColor}" />
+                                <Span Text="v1.0" ForegroundColor="{StaticResource LightTextColor}" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

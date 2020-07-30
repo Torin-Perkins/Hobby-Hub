@@ -20,6 +20,7 @@ namespace XamarinTest.Views
 
             menuItems = new List<HomeMenuItem>
             {
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Home" },
                 new HomeMenuItem {Id = MenuItemType.Art, Title="Art" },
                 new HomeMenuItem {Id = MenuItemType.Engineering, Title="Engineering" },
                 new HomeMenuItem {Id = MenuItemType.Math, Title="Math" },
