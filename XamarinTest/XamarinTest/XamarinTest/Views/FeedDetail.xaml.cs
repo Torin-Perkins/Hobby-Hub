@@ -29,23 +29,19 @@ namespace XamarinTest.Views
             Title = pageName;
             category = pageName;
             updateMessagesAsync();
-            Task.Factory.StartNew(() =>
-            {
-                DateTime dt = DateTime.Now;
-
-                //getting Milliseconds only from the currenttime
-                int ms = dt.Millisecond;
-                while (Application.Current.MainPage is FeedDetail || (Application.Current.MainPage is NavigationPage navPage && navPage.CurrentPage is FeedDetail))
-                {
-                    if(dt.Millisecond - ms > 100)
-                    {
-                        updateMessagesAsync();
-                    }
-                    ms = dt.Millisecond;
-                    //do your job
-                }
+            Device.StartTimer(TimeSpan.FromSeconds(10), () => {
+                // If you want to update UI, make sure its on the on the main thread.
+                // Otherwise, you can remove the BeginInvokeOnMainThread
+                updateMessagesAsync();
+                return true;
             });
-           
+            //Command RefreshCommand = new Command();
+            Msg.RefreshCommand = new Command(() => {
+                //Do your stuff.    
+                updateMessagesAsync();
+                Msg.IsRefreshing = false;
+            });
+
 
         }
 
