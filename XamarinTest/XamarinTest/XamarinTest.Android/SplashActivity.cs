@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace XamarinTest.Droid
 {
-    [Activity(Label = "HobbyHub", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "Hobby Hub", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
         static readonly string TAG = "X:" + typeof(SplashActivity).Name;
