@@ -26,7 +26,11 @@
                Placeholder="Enter your message here"
                VerticalOptions="End"
                MaxLength="50"
-               />
+               ClearButtonVisibility="WhileEditing" 
+               Keyboard="Chat" 
+               ReturnType="Send" 
+               Completed="BtnSend"/>
+        
         <Button x:Name="Send"
                 Text="Send"
                 Clicked="BtnSend"/>
