@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinTest.Views.OpeningPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+     <!--   <StackLayout VerticalOptions="StartAndExpand" 
+                     Orientation="Vertical" 
+                     Padding="16,20,16,20" 
+                     Spacing="10" 
+                     HorizontalOptions="CenterAndExpand">
+            
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Hobby Hub" FontAttributes="Bold" FontSize="22" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout> -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout  BackgroundColor="{StaticResource Accent}" 
+                          VerticalOptions="Start" 
+                          HorizontalOptions="Fill">
+                <StackLayout
+                    Orientation="Horizontal" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center">
+                    <Label
+                        Text="Categories"
+                        HorizontalTextAlignment="Center"
+                        Padding="16,30,16,30"
+                        FontAttributes="Bold" 
+                        FontSize="32"/>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout>
+            <ScrollView Grid.Row="2">
+                <StackLayout VerticalOptions="StartAndExpand" 
+                             Orientation="Vertical" 
+                             Padding="16,20,16,20"
+                             Spacing="10"
+                             HorizontalOptions="CenterAndExpand">
+
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                    <Button Margin="20,10,20,0" Text="Learn more about NWAPW"
+                        Command="{Binding OpenNwapwCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                </StackLayout>
+            </ScrollView>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

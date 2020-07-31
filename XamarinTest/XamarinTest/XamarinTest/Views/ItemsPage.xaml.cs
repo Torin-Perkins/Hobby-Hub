@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using XamarinTest.Models;
 using XamarinTest.Views;
 using XamarinTest.ViewModels;
+using System.Diagnostics;
 
 namespace XamarinTest.Views
 {
@@ -19,6 +20,13 @@ namespace XamarinTest.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
+        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+        int artid = (int)MenuItemType.Art;
+        int engineeringid = (int)MenuItemType.Engineering;
+        int mathid = (int)MenuItemType.Math;
+        int scienceid = (int)MenuItemType.Science;
+        int sportsid = (int)MenuItemType.Sports;
+        int techid = (int)MenuItemType.Technology;
 
         public ItemsPage()
         {
@@ -26,19 +34,30 @@ namespace XamarinTest.Views
 
             BindingContext = viewModel = new ItemsViewModel();
         }
-
-        async void OnItemSelected(object sender, EventArgs args)
+        async void OnArtClicked(object sender, EventArgs args)
         {
-            var layout = (BindableObject)sender;
-            var item = (Item)layout.BindingContext;
-            await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
+            await RootPage.NavigateFromMenu(artid);
         }
-
-        async void AddItem_Clicked(object sender, EventArgs e)
+        async void OnEngineeringClicked(object sender, EventArgs args)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+            await RootPage.NavigateFromMenu(engineeringid);
         }
-
+        async void OnMathClicked(object sender, EventArgs args)
+        {
+            await RootPage.NavigateFromMenu(mathid);
+        }
+        async void OnScienceClicked(object sender, EventArgs args)
+        {
+            await RootPage.NavigateFromMenu(scienceid);
+        }
+        async void OnSportsClicked(object sender, EventArgs args)
+        {
+            await RootPage.NavigateFromMenu(sportsid);
+        }
+        async void OnTechClicked(object sender, EventArgs args)
+        {
+            await RootPage.NavigateFromMenu(techid);
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();

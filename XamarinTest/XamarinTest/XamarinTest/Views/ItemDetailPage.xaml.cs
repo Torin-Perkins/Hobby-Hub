@@ -26,7 +26,7 @@ namespace XamarinTest.Views
         {
             InitializeComponent();
 
-            var item = new Item
+            var item = new Hobby
             {
                 Text = "Item 1",
                 Description = "This is an item description."
