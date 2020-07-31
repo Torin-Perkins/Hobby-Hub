@@ -6,6 +6,12 @@
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.MenuPage"
              Title="Menu">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ListViewMenu">#61BD50</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <StackLayout VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
