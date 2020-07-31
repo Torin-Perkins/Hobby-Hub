@@ -29,28 +29,6 @@ namespace XamarinTest.Views
         public EngineeringPage()
         {
             InitializeComponent();
-            // FirestoreHelper firestoreHelper = new FirestoreHelper();
-            /*
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Electrical Engineering", Description = "This is an engineering item description.", ParentCategory = "Engineering" });
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Chemical Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Mechanical Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Civil Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Automotive Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
-             firestoreHelper.CreateNewHobby(new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Agricultural Engineering", Description = "This is an item description.", ParentCategory = "Engineering" });
- */
-
-            //  firestoreHelper.GetHobbiesByParentVoid("Engineering");
-            // GetMinList();
-          //  Task.Run(async () => { await firestoreHelper.GetHobbiesByParentVoid("Engineering"); }).Wait();
-          //  System.Diagnostics.Debug.WriteLine("MinList: " + firestoreHelper.hobbies.Count);
-            /* new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Electrical Engineering", Description="This is an engineering item description.", ParentCategory = "Engineering"},
-             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Chemical Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
-             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Mechanical Engineering", Description="This is an item description." , ParentCategory = "Engineering"},
-             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Civil Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
-             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Automotive Engineering", Description="This is an item description.", ParentCategory = "Engineering" },
-             new Hobby { Id = firestoreHelper.GenerateHobbyID(), Text = "Agricultural Engineering", Description="This is an item description.", ParentCategory = "Engineering" }*/
-
-
             BindingContext = viewModel = new ItemsViewModel("Engineering");
         }
 

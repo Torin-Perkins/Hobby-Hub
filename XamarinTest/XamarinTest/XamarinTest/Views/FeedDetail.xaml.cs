@@ -29,6 +29,23 @@ namespace XamarinTest.Views
             Title = pageName;
             category = pageName;
             updateMessagesAsync();
+            Task.Factory.StartNew(() =>
+            {
+                DateTime dt = DateTime.Now;
+
+                //getting Milliseconds only from the currenttime
+                int ms = dt.Millisecond;
+                while (Application.Current.MainPage is FeedDetail || (Application.Current.MainPage is NavigationPage navPage && navPage.CurrentPage is FeedDetail))
+                {
+                    if(dt.Millisecond - ms > 100)
+                    {
+                        updateMessagesAsync();
+                    }
+                    ms = dt.Millisecond;
+                    //do your job
+                }
+            });
+           
 
         }
 
