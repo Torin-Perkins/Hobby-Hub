@@ -11,7 +11,7 @@
         <ListView VerticalOptions="StartAndExpand" 
                   x:Name="Msg"
                   IsPullToRefreshEnabled="True"
-                  IsEnabled ="False"
+                 
                   >
                   
             <ListView.ItemTemplate>

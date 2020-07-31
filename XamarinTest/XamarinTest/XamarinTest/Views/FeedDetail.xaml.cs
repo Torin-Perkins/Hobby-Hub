@@ -32,7 +32,7 @@ namespace XamarinTest.Views
             Device.StartTimer(TimeSpan.FromSeconds(10), () => {
                 // If you want to update UI, make sure its on the on the main thread.
                 // Otherwise, you can remove the BeginInvokeOnMainThread
-                updateMessagesAsync();
+                Device.BeginInvokeOnMainThread(() => updateMessagesAsync());
                 return true;
             });
             //Command RefreshCommand = new Command();
