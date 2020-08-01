@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.NewItemPage"
-             Title="New Item">
+             Title="New Hobby">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
@@ -14,12 +14,12 @@
 
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" Placeholder="Item name" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
-            <Label Text="Category" FontSize="Medium" />
-            <Editor Text="{Binding Item.ParentCategory}" d:Text="Category" FontSize="Small" Margin="0" />
+            <Label Text="Add Hobby Name" FontSize="Medium" />
+            <Entry Text="{Binding Item.Text}" Placeholder="Hobbu name" FontSize="Small" />
+            <Label Text="Add Hobby Description" FontSize="Medium" />
+            <Editor Text="{Binding Item.Description}" d:Text="Hobby description" FontSize="Small" Margin="0" />
+            <Label Text="Choose which Category" FontSize="Medium" />
+            <Picker Title="Hobby Catagory" TextColor="Black" FontSize="Small" x:Name="Pick" SelectedIndexChanged="Pick_SelectedIndexChanged"/>
         </StackLayout>
     </ContentPage.Content>
 
