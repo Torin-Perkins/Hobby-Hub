@@ -6,8 +6,8 @@ namespace XamarinTest.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
-        public Item Item { get; set; }
-        public ItemDetailViewModel(Item item = null)
+        public Hobby Item { get; set; }
+        public ItemDetailViewModel(Hobby item = null)
         {
             Title = item?.Text;
             Item = item;

@@ -10,9 +10,13 @@ namespace XamarinTest.ViewModels
         public AboutViewModel()
         {
             Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+            OpenNwapwCommand = new Command(async () => await Browser.OpenAsync("http://nwapw.org/"));
+            OpenXamCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+            OpenGitCommand = new Command(async () => await Browser.OpenAsync("https://github.com/Torin-Perkins/Hobby-Hub"));
         }
 
-        public ICommand OpenWebCommand { get; }
+        public ICommand OpenNwapwCommand { get; }
+        public ICommand OpenXamCommand { get; }
+        public ICommand OpenGitCommand { get; }
     }
 }

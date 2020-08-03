@@ -376,3 +376,12 @@ MigrationBackup/
 *.csprojAssemblyReference.cache
 *.iOS.csprojAssemblyReference.cache
 *.props
+*.props
+Hobby-Hub/Hobby-Hub/Hobby-Hub.Android/obj/Debug/90/designtime/build.props
+*.cache
+XamarinTest/XamarinTest/XamarinTest.Android/obj/Debug/90/designtime/build.props
+XamarinTest/XamarinTest/XamarinTest.Android/obj/Debug/90/libraryprojectimports.cache
+XamarinTest/XamarinTest/XamarinTest.Android/obj/Debug/90/XamarinTest.Android.csprojAssemblyReference.cache
+XamarinTest/XamarinTest/XamarinTest.iOS/obj/iPhone/Debug/XamarinTest.iOS.csprojAssemblyReference.cache
+XamarinTest/XamarinTest/XamarinTest/obj/Debug/netstandard2.0/XamarinTest.assets.cache
+XamarinTest/XamarinTest/XamarinTest/obj/Debug/netstandard2.0/XamarinTest.csprojAssemblyReference.cache
