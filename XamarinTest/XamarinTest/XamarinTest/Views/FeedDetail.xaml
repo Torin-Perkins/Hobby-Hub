@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custom="clr-namespace:XamarinTest.CustomControls;assembly=XamarinTest"
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.FeedDetail"
              Title="{Binding Title}">
@@ -16,7 +17,7 @@
                   
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell 
+                    <TextCell
                         TextColor="Black"
                         Text="{Binding PostText}" >
                     </TextCell>
@@ -29,7 +30,11 @@
                Placeholder="Enter your message here"
                VerticalOptions="End"
                MaxLength="50"
-               />
+               ClearButtonVisibility="WhileEditing" 
+               Keyboard="Chat" 
+               ReturnType="Send" 
+               Completed="BtnSend"/>
+        
         <Button x:Name="Send"
                 Text="Send"
                 Clicked="BtnSend"/>
