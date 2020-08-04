@@ -23,7 +23,7 @@ namespace XamarinTest.Views
 
             if (created)
             {
-                if (await firestoreHelper.QueryUserByUserName(UserInput.Text))
+                if (!await firestoreHelper.QueryUserByUserName(UserInput.Text))
                 {
                     await DisplayAlert("Sign Up Failed", "Username is already taken.", "OK");
                 }
