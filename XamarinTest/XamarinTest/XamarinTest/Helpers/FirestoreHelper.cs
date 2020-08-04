@@ -54,6 +54,17 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		public async Task<bool> QuertUserByUserName(string UserName)
+        {
+			var document = await CrossCloudFirestore.
+				Current.
+				Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserName", UserName).
+				GetDocumentsAsync();
+
+			return document.IsEmpty;
+		}
 		public async Task<bool> QueryPostByCategory(string ParentCategory)
         {
 			var document = await CrossCloudFirestore.
@@ -114,6 +125,16 @@ namespace XamarinTest.Helpers
 			var query = await CrossCloudFirestore.Current.Instance.
 				GetCollection("Users").
 				WhereEqualsTo("DeviceModel", DeviceModel).
+				LimitTo(1).
+				GetDocumentsAsync();
+			User[] user = query.ToObjects<User>().ToArray();
+			return user[0];
+		}
+		public async Task<User> GetUserById(string UserID)
+		{
+			var query = await CrossCloudFirestore.Current.Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserID", UserID).
 				LimitTo(1).
 				GetDocumentsAsync();
 			User[] user = query.ToObjects<User>().ToArray();

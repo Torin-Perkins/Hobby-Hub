@@ -48,13 +48,14 @@ namespace XamarinTest.Views
         public async void BtnSend(object sender, EventArgs e)
 		{
             if (!IsFormValid()) { await DisplayAlert("Error", "A Message is Required", "OK"); return; }
+            User user = await firestoreHelper.GetUserById(MainPage.UserID);
             firestoreHelper.AddPost(
                 new Post
                 {
                     PostID = firestoreHelper.GeneratePostID(),
-                    PostedByUser = MainPage.UserID,
+                    PostedByUser = user.UserName,
                     DatePosted = DateTime.Now,
-                    PostText = Message.Text + " -User#" + MainPage.UserID,
+                    PostText = Message.Text + " -" + user.UserName,
                     ParentCategory = category
                 });
             Message.Text = "";

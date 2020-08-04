@@ -26,7 +26,7 @@ namespace XamarinTest.Views
 			string Token = await auth.LoginWithEmailPassword(EmailInput.Text, PasswordInput.Text);
 			if (Token != "")
 			{
-				//MainPage.UserID = auth.LoginWithEmailPassword(EmailInput.Text, PasswordInput.Text).Id.ToString();
+				MainPage.UserID =  await auth.GetUserID(EmailInput.Text, PasswordInput.Text);
 				await Navigation.PushAsync(new ItemsPage());
 			}
 			else
