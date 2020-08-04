@@ -66,6 +66,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Usernames match the input
+		 */
 		public async Task<bool> QueryUserByUserName(string UserName)
 		{
 			var document = await CrossCloudFirestore.
@@ -77,6 +81,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if there are any posts in a certain category
+		 */
 		public async Task<bool> QueryPostByCategory(string ParentCategory)
 		{
 			var document = await CrossCloudFirestore.
@@ -88,6 +96,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Device Models match the input
+		 */
 		public async Task<bool> QueryDeviceModel(string DeviceModel)
 		{
 			var document = await CrossCloudFirestore.
@@ -99,6 +111,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Post ID numbers match the input
+		 */
 		public async Task<bool> QueryPostID(string PostID)
 		{
 			var document = await CrossCloudFirestore.
@@ -110,6 +126,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any hobby ID numbers match the input
+		 */
 		public async Task<bool> QueryHobbyID(string HobbyID)
 		{
 			var document = await CrossCloudFirestore.
@@ -121,6 +141,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Hobby Names match the input
+		 */
 		public async Task<bool> QueryHobbyName(string HobbyName)
 		{
 			var document = await CrossCloudFirestore.
@@ -132,6 +156,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a User Model
+		 * Returns one user based on Device Model
+		 */
 		public async Task<User> GetUser(string DeviceModel)
 		{
 			var query = await CrossCloudFirestore.Current.Instance.
@@ -142,6 +170,10 @@ namespace XamarinTest.Helpers
 			User[] user = query.ToObjects<User>().ToArray();
 			return user[0];
 		}
+		/*
+		 * Async Task to retrieve a User datatype
+		 * Returns 1 user based on the UserID
+		 */
 		public async Task<User> GetUserById(string UserID)
 		{
 			var query = await CrossCloudFirestore.Current.Instance.
@@ -152,6 +184,10 @@ namespace XamarinTest.Helpers
 			User[] user = query.ToObjects<User>().ToArray();
 			return user[0];
 		}
+		/*
+		 * Async Task to retrieve a List of Posts datatype
+		 * Returns list posts in one category
+		 */
 		public async Task<List<Post>> getMessages(string category)
 		{
 			var query = await CrossCloudFirestore.Current
@@ -164,6 +200,10 @@ namespace XamarinTest.Helpers
 			posts.Sort((x, y) => DateTime.Compare(x.DatePosted, y.DatePosted));
 			return posts;
 		}
+		/*
+		 * Async Task to retrieve a List of Hobbies datatype
+		 * Returns list hobbies in one category
+		 */
 		public async Task<List<Hobby>> GetHobbiesByParent(string ParentCategory)
 		{
 			var query = await CrossCloudFirestore.
@@ -177,6 +217,10 @@ namespace XamarinTest.Helpers
 
 			return hobbies;
 		}
+		/*
+		 * tempUser, CheckUser, and GenerateUserID all work together to Generate a Unique ID
+		 * Mixture of async and sync methods for easy access to string
+		 */
 		private bool tempUser = true;
 		private async void checkUser(string UserID)
 		{

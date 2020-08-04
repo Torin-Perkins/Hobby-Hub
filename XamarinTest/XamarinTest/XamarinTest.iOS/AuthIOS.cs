@@ -1,7 +1,10 @@
 ﻿using Firebase.Auth;
 using System;
 using System.Threading.Tasks;
+using Xamarin.Forms;
+using XamarinTest.iOS;
 
+[assembly:Dependency(typeof(AuthIOS))]
 namespace XamarinTest.iOS
 {
     public class AuthIOS : IAuth
@@ -20,19 +23,24 @@ namespace XamarinTest.iOS
 
         }
 
-        Task<string> IAuth.GetUserID(string email, string password)
+        async Task<string> IAuth.GetUserID(string email, string password)
         {
-            throw new NotImplementedException();
+            var user = await Auth.DefaultInstance.SignInWithPasswordAsync(email, password);
+            var token = user.User.Uid;
+            return token;
         }
 
-        Task<string> IAuth.LoginWithEmailPassword(string email, string password)
+        async Task<bool> IAuth.SignUpWithEmailPasswordAsync(string email, string password)
         {
-            throw new NotImplementedException();
-        }
-
-        Task<bool> IAuth.SignUpWithEmailPasswordAsync(string email, string password)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                var signUpTask = await Auth.DefaultInstance.CreateUserAsync(email, password);
+                return signUpTask != null;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }
