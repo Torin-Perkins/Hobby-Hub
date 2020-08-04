@@ -1,5 +1,4 @@
-﻿using Android.Widget;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
@@ -34,8 +33,8 @@ namespace XamarinTest.Views
 
             Item = new Hobby
             {
-                Text = "Item name",
-                Description = "This is an item description.",
+                Text = "",
+                Description = "",
                 Id = firestoreHelper.GenerateHobbyID(),
                 ParentCategory = "The category it is in"
             };

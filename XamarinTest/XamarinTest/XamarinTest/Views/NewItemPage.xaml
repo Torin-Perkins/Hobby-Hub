@@ -15,11 +15,11 @@
     <ContentPage.Content>
         <StackLayout Spacing="20" Padding="15">
             <Label Text="Add Hobby Name" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" Placeholder="Hobbu name" FontSize="Small" />
+            <Entry Text="{Binding Item.Text}" Placeholder="Hobby name" FontSize="Small" />
             <Label Text="Add Hobby Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Hobby description" FontSize="Small" Margin="0" />
+            <Editor Text="{Binding Item.Description}" Placeholder="This is a hobby description." FontSize="Small" Margin="0" />
             <Label Text="Choose which Category" FontSize="Medium" />
-            <Picker Title="Hobby Catagory" TextColor="Black" FontSize="Small" x:Name="Pick" SelectedIndexChanged="Pick_SelectedIndexChanged"/>
+            <Picker Title="Hobby Category" TextColor="Black" FontSize="Small" x:Name="Pick" SelectedIndexChanged="Pick_SelectedIndexChanged"/>
         </StackLayout>
     </ContentPage.Content>
 
