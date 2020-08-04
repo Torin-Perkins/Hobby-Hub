@@ -9,6 +9,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinTest.Helpers;
 using XamarinTest.Models;
+using System.Windows;
+using Android.Widget;
 
 namespace XamarinTest.Views
 {
@@ -44,7 +46,8 @@ namespace XamarinTest.Views
                     PostedByUser = MainPage.UserID,
                     DatePosted = DateTime.Now,
                     PostText = Message.Text + " -User#" + MainPage.UserID,
-                    ParentCategory = category
+                    ParentCategory = category,
+                    HLocation = "End"
                 });
             Message.Text = "";
             updateMessagesAsync();
@@ -54,11 +57,28 @@ namespace XamarinTest.Views
             if (!(await firestoreHelper.QueryPostByCategory(Title)))
             {
                 List<Post> allPosts = await firestoreHelper.getMessages(category);
+                foreach (Post post in allPosts)
+                {
+                    if(post.PostedByUser == MainPage.UserID)
+                    {
+                        post.HLocation = "End";
+                    }
+                    else
+                    {
+                        post.HLocation = "Start";
+                    }
+                }
                 //Msg.ItemsSource = allPosts;
+
                 ItemsCollectionView.ItemsSource = allPosts;
             }
         }
         private bool IsFormValid() => IsNameValid();
         private bool IsNameValid() => !string.IsNullOrWhiteSpace(Message.Text);
+
+        private void ItemsCollectionView_Scrolled(object sender, ItemsViewScrolledEventArgs e)
+        {
+
+        }
     }
 }

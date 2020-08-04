@@ -23,20 +23,25 @@
         </ListView>-->
 
         <CollectionView x:Name="ItemsCollectionView"
-                ItemsSource="{Binding allPosts}">
+                ItemsSource="{Binding allPosts}"
+                        VerticalScrollBarVisibility="Default"
+                        ItemsUpdatingScrollMode="KeepLastItemInView">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10">
-                        <Label Text="{Binding PostText}" 
-                                    d:Text="{Binding .}"
-                                    LineBreakMode="NoWrap" 
-                                    Style="{DynamicResource ListItemTextStyle}" 
-                                    FontSize="16" />
+                        <Label 
+                            Text="{Binding PostText}"
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}"
+                            FontSize="16"
+                            HorizontalOptions="{Binding HLocation}"
+                            />
                         <Label Text="{Binding DatePosted}" 
-                                    d:Text="Item descripton"
-                                    LineBreakMode="NoWrap"
-                                    Style="{DynamicResource ListItemDetailTextStyle}"
-                                    FontSize="13" />
+                            d:Text="Date/Time Stamp"
+                            LineBreakMode="NoWrap"
+                            HorizontalTextAlignment="Start"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

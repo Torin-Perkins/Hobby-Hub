@@ -11,5 +11,6 @@ namespace XamarinTest.Models
         public DateTime DatePosted { get; set; }
         public string PostText { get; set; }
         public string ParentCategory { get; set; }
+        public string HLocation { get; set; }
     }
 }
