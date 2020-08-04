@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace XamarinTest.Views
     {
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         string category;
+
         public FeedDetail()
         {
             InitializeComponent();
@@ -52,7 +54,8 @@ namespace XamarinTest.Views
             if (!(await firestoreHelper.QueryPostByCategory(Title)))
             {
                 List<Post> allPosts = await firestoreHelper.getMessages(category);
-                Msg.ItemsSource = allPosts;
+                //Msg.ItemsSource = allPosts;
+                ItemsCollectionView.ItemsSource = allPosts;
             }
         }
         private bool IsFormValid() => IsNameValid();
