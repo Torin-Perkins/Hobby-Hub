@@ -7,14 +7,11 @@
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.FeedDetail"
              Title="{Binding Title}">
-    
+
     <StackLayout>
-        <ListView VerticalOptions="StartAndExpand" 
-                  x:Name="Msg"
-                  IsPullToRefreshEnabled="True"
-                 
-                  >
-                  
+        <!--<ListView VerticalOptions="StartAndExpand" 
+                  x:Name="Msg">
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell
@@ -23,7 +20,34 @@
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
+
+        <CollectionView x:Name="ItemsCollectionView"
+                ItemsSource="{Binding allPosts}"
+                        VerticalScrollBarVisibility="Default"
+                        ItemsUpdatingScrollMode="KeepLastItemInView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label 
+                            Text="{Binding PostText}"
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}"
+                            FontSize="16"
+                            HorizontalOptions="{Binding HLocation}"
+                            />
+                        <Label Text="{Binding DatePosted}" 
+                            d:Text="Date/Time Stamp"
+                            LineBreakMode="NoWrap"
+                            HorizontalTextAlignment="Start"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
 
         <Entry Margin="0,30"
                x:Name="Message"

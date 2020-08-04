@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Android.Widget;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
@@ -13,11 +14,23 @@ namespace XamarinTest.Views
     [DesignTimeVisible(false)]
     public partial class NewItemPage : ContentPage
     {
+
         public Hobby Item { get; set; }
+        public string CatagoryName { get; private set; }
+
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         public NewItemPage()
         {
             InitializeComponent();
+
+            Pick.Items.Add("Art");
+            Pick.Items.Add("Engineering");
+            Pick.Items.Add("Math");
+            Pick.Items.Add("Science");
+            Pick.Items.Add("Sports");
+            Pick.Items.Add("Technology");
+
+
 
             Item = new Hobby
             {
@@ -32,7 +45,8 @@ namespace XamarinTest.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-           // MessagingCenter.Send(this, "AddItem", Item);
+            // MessagingCenter.Send(this, "AddItem", Item);
+            Item.ParentCategory = CatagoryName;
             firestoreHelper.CreateNewHobby(Item);
             await Navigation.PopModalAsync();
         }
@@ -40,6 +54,20 @@ namespace XamarinTest.Views
         async void Cancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        async void Pick_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Pick.SelectedIndex == -1)
+            {
+                
+            }
+            else
+            {
+                CatagoryName = Pick.Items[Pick.SelectedIndex];
+                
+
+            }
         }
     }
 }
