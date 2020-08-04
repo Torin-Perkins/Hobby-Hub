@@ -33,6 +33,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
+    <MandroidI18n />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -103,6 +108,19 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\iclauncher.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\iclauncher.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\iclauncher.png" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\iclauncher.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\iclauncherround.xml" />
+    <AndroidResource Include="Resources\values\iclauncherbackground.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\iclauncherforeground.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\iclauncherround.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\iclauncherforeground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\iclauncherround.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\iclauncherforeground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\iclauncherround.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\iclauncherforeground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\iclauncherround.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\iclauncherforeground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\iclauncherround.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

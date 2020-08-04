@@ -33,58 +33,46 @@
         <ScrollView Grid.Row="1">
             <StackLayout VerticalOptions="CenterAndExpand" 
                          Orientation="Vertical" 
-                         Padding="16,20,16,20" 
+                         Padding="16,0,16,0" 
                          Spacing="30" 
                          HorizontalOptions="Fill">
-
-
+                <Label Text="Welcome to Hobby Hub!" FontAttributes="Bold"/>
+                <Label Text="Hobby Hub is divided into set categories that are hard-coded, and inside those categories there are what we call &quot;Hobbies&quot;. These hobbies are user-created and each one can be tapped on in order to open a message board relating to that hobby"/>
 
                 <Button Margin="20,5,20,0" Text="Art Hobbies"
                         Clicked ="OnArtClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Engineering Hobbies"
                         Clicked ="OnEngineeringClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Math Hobbies"
                         Clicked ="OnMathClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Science Hobbies"
                         Clicked ="OnScienceClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
                 <Button Margin="20,5,20,0" Text="Sports Hobbies"
                         Clicked ="OnSportsClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
-                <Button Margin="20,10,20,0" Text="Tech Hobbies"
+                <Button Margin="20,5,20,0" Text="Tech Hobbies"
                         Clicked ="OnTechClicked"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" 
-                        HeightRequest="80"
-                        FontSize="20"
                         FontAttributes="Bold"/>
 
             </StackLayout>

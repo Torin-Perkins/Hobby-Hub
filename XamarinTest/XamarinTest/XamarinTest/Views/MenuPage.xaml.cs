@@ -12,6 +12,7 @@ namespace XamarinTest.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
+        ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
         public MenuPage()
@@ -42,6 +43,18 @@ namespace XamarinTest.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+        }
+        private void ViewCell_Tapped(object sender, System.EventArgs e)
+        {
+            if (lastCell != null)
+                lastCell.View.BackgroundColor = Color.Transparent;
+
+            var viewCell = (ViewCell)sender;
+            if(viewCell.View != null)
+            {
+                viewCell.View.BackgroundColor = Color.FromHex("#AC4FBD");
+                lastCell = viewCell;
+            }
         }
     }
 }
