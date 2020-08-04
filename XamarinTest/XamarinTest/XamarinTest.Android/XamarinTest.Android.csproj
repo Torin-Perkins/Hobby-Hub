@@ -99,6 +99,8 @@
     <AndroidResource Include="Resources\drawable\Art.jpg" />
     <AndroidResource Include="Resources\drawable\Engineering.png" />
     <AndroidResource Include="Resources\drawable\Math.jpg" />
+    <AndroidResource Include="Resources\drawable\HobbyHubIcon.png" />
+    <AndroidResource Include="Resources\drawable\Home.png" />
     <Content Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\Sports.jpg" />
     <AndroidResource Include="Resources\drawable\Technology.png" />

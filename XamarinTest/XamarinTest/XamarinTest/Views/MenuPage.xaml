@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.MenuPage"
              Title="Menu">
+
     <StackLayout VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
@@ -28,7 +29,7 @@
                                         <ColumnDefinition Width="30"/>
                                         <ColumnDefinition Width="1"/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0" Grid.Row="0" 
+                                    <Image Grid.Column="0" Grid.Row="0"
                                     WidthRequest="30" HorizontalOptions="Start" Source="{Binding ImagePath}" />
                                     <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="100"
                                     HorizontalTextAlignment="Start" Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
