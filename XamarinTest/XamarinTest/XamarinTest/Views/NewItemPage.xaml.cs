@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinTest.Helpers;
 using XamarinTest.Models;
 
@@ -59,12 +57,12 @@ namespace XamarinTest.Views
         {
             if (Pick.SelectedIndex == -1)
             {
-                
+
             }
             else
             {
                 CatagoryName = Pick.Items[Pick.SelectedIndex];
-                
+
 
             }
         }

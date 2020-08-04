@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using XamarinTest.Models;
 
 namespace XamarinTest.ViewModels

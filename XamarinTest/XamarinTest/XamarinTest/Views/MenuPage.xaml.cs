@@ -1,9 +1,7 @@
-﻿using XamarinTest.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using XamarinTest.Models;
 
 namespace XamarinTest.Views
 {
@@ -35,6 +33,7 @@ namespace XamarinTest.Views
             ListViewMenu.ItemsSource = menuItems;
 
             ListViewMenu.SelectedItem = menuItems[0];
+
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

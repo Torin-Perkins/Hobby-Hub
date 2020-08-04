@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub.Android", "Hobby-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub.iOS", "Hobby-Hub\Hobby-Hub.iOS\Hobby-Hub.iOS.csproj", "{81A1AE19-D277-469F-864B-13E3DB26C2B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hobby-Hub", "Hobby-Hub\Hobby-Hub\Hobby-Hub.csproj", "{5507ED89-311A-4F61-9610-FB337A87AB20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HobbyHub", "Hobby-Hub\Hobby-Hub\HobbyHub.csproj", "{5507ED89-311A-4F61-9610-FB337A87AB20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02DD8336-5E0F-4ED8-A166-1266D8AAA8C1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

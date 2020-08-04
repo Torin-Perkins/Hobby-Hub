@@ -1,24 +1,26 @@
-﻿using System;
+﻿using Plugin.CloudFirestore;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using XamarinTest.Models;
-using Plugin.CloudFirestore;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
+using XamarinTest.Models;
 
 namespace XamarinTest.Helpers
 {
+	/*
+	 * FirestoreHelper contains every method to access the database
+	 * Uses functions in the Plugin.Cloud.Firestore
+	 * Simple NoSQL commands to query, retrieve, and update multiple collections
+	 * Instantiated by pages that need to access data from Google Firestore Database
+	 */
 	class FirestoreHelper
 	{
-		public List<Hobby> hobbies;
 		public FirestoreHelper()
-        {
-
-        }
-		public FirestoreHelper(string category)
-        {
-			//GetHobbiesByParentVoid(category);
-        }
+		{
+		}
+		/*
+		 * Async method to add model Post to the datbase
+		 */
 		public async void AddPost(Post post)
 		{
 			await CrossCloudFirestore.
@@ -26,6 +28,9 @@ namespace XamarinTest.Helpers
 				Instance.
 				GetCollection("Posts").
 				AddDocumentAsync(post);
+		/*
+		 * Async method to add model User to the datbase
+		 */
 		}
 		public async void CreateNewUser(User user)
 		{
@@ -35,6 +40,9 @@ namespace XamarinTest.Helpers
 				GetCollection("Users").
 				AddDocumentAsync(user);
 		}
+		/*
+		 * Async method to add model Hobby to the datbase
+		 */
 		public async void CreateNewHobby(Hobby hobby)
 		{
 			await CrossCloudFirestore.
@@ -43,6 +51,10 @@ namespace XamarinTest.Helpers
 			   GetCollection("Hobbies").
 			   AddDocumentAsync(hobby);
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Id numbers match the input
+		 */
 		public async Task<bool> QueryUserID(string UserID)
 		{
 			var document = await CrossCloudFirestore.
@@ -54,8 +66,27 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Usernames match the input
+		 */
+		public async Task<bool> QueryUserByUserName(string UserName)
+		{
+			var document = await CrossCloudFirestore.
+				Current.
+				Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserName", UserName).
+				GetDocumentsAsync();
+
+			return document.IsEmpty;
+		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if there are any posts in a certain category
+		 */
 		public async Task<bool> QueryPostByCategory(string ParentCategory)
-        {
+		{
 			var document = await CrossCloudFirestore.
 				Current.
 				Instance.
@@ -65,6 +96,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Device Models match the input
+		 */
 		public async Task<bool> QueryDeviceModel(string DeviceModel)
 		{
 			var document = await CrossCloudFirestore.
@@ -76,6 +111,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Post ID numbers match the input
+		 */
 		public async Task<bool> QueryPostID(string PostID)
 		{
 			var document = await CrossCloudFirestore.
@@ -87,6 +126,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any hobby ID numbers match the input
+		 */
 		public async Task<bool> QueryHobbyID(string HobbyID)
 		{
 			var document = await CrossCloudFirestore.
@@ -98,6 +141,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Hobby Names match the input
+		 */
 		public async Task<bool> QueryHobbyName(string HobbyName)
 		{
 			var document = await CrossCloudFirestore.
@@ -109,6 +156,10 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
+		/*
+		 * Async Task to retrieve a User Model
+		 * Returns one user based on Device Model
+		 */
 		public async Task<User> GetUser(string DeviceModel)
 		{
 			var query = await CrossCloudFirestore.Current.Instance.
@@ -119,6 +170,24 @@ namespace XamarinTest.Helpers
 			User[] user = query.ToObjects<User>().ToArray();
 			return user[0];
 		}
+		/*
+		 * Async Task to retrieve a User datatype
+		 * Returns 1 user based on the UserID
+		 */
+		public async Task<User> GetUserById(string UserID)
+		{
+			var query = await CrossCloudFirestore.Current.Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserID", UserID).
+				LimitTo(1).
+				GetDocumentsAsync();
+			User[] user = query.ToObjects<User>().ToArray();
+			return user[0];
+		}
+		/*
+		 * Async Task to retrieve a List of Posts datatype
+		 * Returns list posts in one category
+		 */
 		public async Task<List<Post>> getMessages(string category)
 		{
 			var query = await CrossCloudFirestore.Current
@@ -131,8 +200,12 @@ namespace XamarinTest.Helpers
 			posts.Sort((x, y) => DateTime.Compare(x.DatePosted, y.DatePosted));
 			return posts;
 		}
+		/*
+		 * Async Task to retrieve a List of Hobbies datatype
+		 * Returns list hobbies in one category
+		 */
 		public async Task<List<Hobby>> GetHobbiesByParent(string ParentCategory)
-        {
+		{
 			var query = await CrossCloudFirestore.
 				Current.
 				Instance.
@@ -143,23 +216,11 @@ namespace XamarinTest.Helpers
 			System.Diagnostics.Debug.WriteLine("Hobbies: " + query.ToObjects<Hobby>().ToList<Hobby>().First().Text);
 
 			return hobbies;
-        }
-		public async Task GetHobbiesByParentVoid(string ParentCategory)
-		{
-			var query = await CrossCloudFirestore.
-				Current.
-				Instance.
-				GetCollection("Hobbies").
-				WhereEqualsTo("ParentCategory", ParentCategory).
-				GetDocumentsAsync();
-			hobbies = query.ToObjects<Hobby>().ToList<Hobby>();
-			System.Diagnostics.Debug.WriteLine("Hobbies: " + query.ToObjects<Hobby>().ToList<Hobby>().First().Text);
-
-			
 		}
-
-
-
+		/*
+		 * tempUser, CheckUser, and GenerateUserID all work together to Generate a Unique ID
+		 * Mixture of async and sync methods for easy access to string
+		 */
 		private bool tempUser = true;
 		private async void checkUser(string UserID)
 		{

@@ -63,6 +63,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AuthIOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -141,6 +142,9 @@
   <ItemGroup>
     <PackageReference Include="Plugin.CloudFirestore">
       <Version>3.1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Auth">
+      <Version>6.5.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.iOS.CloudFirestore">
       <Version>1.12.0</Version>

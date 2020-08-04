@@ -2,15 +2,76 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:behavior="clr-namespace:HobbyHub.Behavior"
              mc:Ignorable="d"
-             x:Class="Hobby_Hub.MainPage">
+             x:Class="HobbyHub.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout 
+        Margin="30,30"
+        HorizontalOptions="Center"
+        Orientation="Vertical">
+        <Label
+            VerticalOptions="Start"
+            FontAttributes="Bold" FontSize="Title"
+            TextColor="DarkGray" HorizontalTextAlignment="Center"
+            Text="Xamarin.Forms and Firebase Test">
+        </Label>
+
+        <Entry
+            Margin="0,30"
+            x:Name="TxtName"
+            VerticalOptions="Start"
+            Placeholder="Name">
+        </Entry>
+
+        <Entry
+            x:Name="TxtPhone"
+            VerticalOptions="Start"
+            Placeholder="Phone Number" 
+            Keyboard="Numeric">
+            <Entry.Behaviors>
+                <behavior:MaskedBehavior Mask="(XXX) XXX-XXXX"/>
+            </Entry.Behaviors>
+        </Entry>
+
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Orientation="Horizontal">
+            
+            <Button x:Name="BtnAdd" 
+                    WidthRequest="150" 
+                    Text="Add" 
+                    Clicked="BtnAdd_Clicked"/>
+
+            <Button x:Name="BtnDelete" 
+                    WidthRequest="150" 
+                    Text="Delete" 
+                    Clicked="BtnDelete_Clicked" />
+        </StackLayout>
+
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start"
+            Orientation="Horizontal">
+            
+            <Button x:Name="BtnUpdate" 
+                    WidthRequest="150" 
+                    Text="Update" 
+                    Clicked="BtnUpdate_Clicked" />
+        </StackLayout>
+
+        <ListView VerticalOptions="EndAndExpand" 
+                  x:Name="LstPersons" 
+                  ItemSelected="LstPersons_OnItemSelected">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell 
+                        Text="{Binding Name}">
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
-
 </ContentPage>

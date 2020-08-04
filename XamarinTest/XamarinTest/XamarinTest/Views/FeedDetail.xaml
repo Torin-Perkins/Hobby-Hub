@@ -9,8 +9,11 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <!--<ListView VerticalOptions="StartAndExpand" 
-                  x:Name="Msg">
+        <ListView VerticalOptions="StartAndExpand"
+                  x:Name="Msg"
+                  IsPullToRefreshEnabled="True"
+
+                  >
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -27,12 +30,12 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10">
-                        <Label Text="{Binding PostText}" 
+                        <Label Text="{Binding PostText}"
                                     d:Text="{Binding .}"
-                                    LineBreakMode="NoWrap" 
-                                    Style="{DynamicResource ListItemTextStyle}" 
+                                    LineBreakMode="NoWrap"
+                                    Style="{DynamicResource ListItemTextStyle}"
                                     FontSize="16" />
-                        <Label Text="{Binding DatePosted}" 
+                        <Label Text="{Binding DatePosted}"
                                     d:Text="Item descripton"
                                     LineBreakMode="NoWrap"
                                     Style="{DynamicResource ListItemDetailTextStyle}"
@@ -49,11 +52,11 @@
                Placeholder="Enter your message here"
                VerticalOptions="End"
                MaxLength="50"
-               ClearButtonVisibility="WhileEditing" 
-               Keyboard="Chat" 
-               ReturnType="Send" 
+               ClearButtonVisibility="WhileEditing"
+               Keyboard="Chat"
+               ReturnType="Send"
                Completed="BtnSend"/>
-        
+
         <Button x:Name="Send"
                 Text="Send"
                 Clicked="BtnSend"/>
