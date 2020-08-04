@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,12 +23,19 @@ namespace XamarinTest.Views
 
             if (created)
             {
-                await DisplayAlert("Success", "Welcome to our system. Log in to have full access", "OK");
-                firestoreHelper.CreateNewUser(new Models.User { UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text), DeviceModel = DeviceInfo.Model.ToString(), UserName = UserInput.Text });
-                await Navigation.PushAsync(new LoginPage());
+                if (await firestoreHelper.QueryUserByUserName(UserInput.Text))
+                {
+                    await DisplayAlert("Sign Up Failed", "Username is already taken.", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Success", "Welcome to our system. Log in to have full access", "OK");
+                    firestoreHelper.CreateNewUser(new Models.User { UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text), DeviceModel = DeviceInfo.Model.ToString(), UserName = UserInput.Text });
+                    await Navigation.PushAsync(new LoginPage());
+                }
             }
             else
-           {
+            {
                 await DisplayAlert("Sign Up Failed", "Something went wrong. Try again!", "OK");
             }
         }

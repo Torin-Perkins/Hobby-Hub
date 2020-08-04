@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XamarinTest.Models
+﻿namespace XamarinTest.Models
 {
     public enum MenuItemType
     {
         Browse,
         About,
-        Science, 
-        Engineering, 
-        Technology, 
-        Math, 
-        Art, 
+        Science,
+        Engineering,
+        Technology,
+        Math,
+        Art,
         Sports
     }
     public class HomeMenuItem
@@ -21,6 +17,6 @@ namespace XamarinTest.Models
 
         public string Title { get; set; }
 
-        public string ImagePath { get; set;  }
+        public string ImagePath { get; set; }
     }
 }

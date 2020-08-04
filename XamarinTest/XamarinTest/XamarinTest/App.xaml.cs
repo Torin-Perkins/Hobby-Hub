@@ -1,7 +1,5 @@
-﻿using System;
-using Xamarin.Essentials;
+﻿using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinTest.Helpers;
 using XamarinTest.Models;
 using XamarinTest.Services;

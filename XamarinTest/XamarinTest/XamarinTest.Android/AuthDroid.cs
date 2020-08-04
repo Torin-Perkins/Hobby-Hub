@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Android.App;
-using Android.Content;
-using Android.Gms.Extensions;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.Gms.Extensions;
 using Firebase.Auth;
+using System;
+using System.Threading.Tasks;
 using XamarinTest.Droid;
-using XamarinTest;
-using Xamarin.Forms;
 
 //[assembly: Dependency(typeof(AuthDroid))]
 [assembly: Xamarin.Forms.Dependency(typeof(AuthDroid))]
@@ -41,7 +29,7 @@ namespace XamarinTest.Droid
         {
             try
             {
-                
+
 
                 var signUpTask = await Firebase.Auth.FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(email, password);// await FirebaseAuth.Instance.CreateUserWithEmailAndPassword(email, password);
                 System.Diagnostics.Debug.WriteLine("SIGN: " + signUpTask != null);

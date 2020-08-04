@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace XamarinTest.Models
+﻿namespace XamarinTest.Models
 {
     class User
     {

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,22 +18,24 @@ namespace XamarinTest.Views
             InitializeComponent();
             //updateMessagesAsync();
         }
-        
+
         public FeedDetail(String pageName)
         {
-            
+
             InitializeComponent();
             Title = pageName;
             category = pageName;
             updateMessagesAsync();
-            Device.StartTimer(TimeSpan.FromSeconds(10), () => {
+            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
+            {
                 // If you want to update UI, make sure its on the on the main thread.
                 // Otherwise, you can remove the BeginInvokeOnMainThread
                 Device.BeginInvokeOnMainThread(() => updateMessagesAsync());
                 return true;
             });
             //Command RefreshCommand = new Command();
-            Msg.RefreshCommand = new Command(() => {
+            Msg.RefreshCommand = new Command(() =>
+            {
                 //Do your stuff.    
                 updateMessagesAsync();
                 Msg.IsRefreshing = false;
@@ -46,7 +45,7 @@ namespace XamarinTest.Views
         }
 
         public async void BtnSend(object sender, EventArgs e)
-		{
+        {
             if (!IsFormValid()) { await DisplayAlert("Error", "A Message is Required", "OK"); return; }
             User user = await firestoreHelper.GetUserById(MainPage.UserID);
             firestoreHelper.AddPost(
@@ -60,7 +59,7 @@ namespace XamarinTest.Views
                 });
             Message.Text = "";
             updateMessagesAsync();
-		}
+        }
         private async void updateMessagesAsync()
         {
             if (!(await firestoreHelper.QueryPostByCategory(Title)))

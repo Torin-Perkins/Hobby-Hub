@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace XamarinTest.Models
+﻿namespace XamarinTest.Models
 {
     public class Hobby
     {

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinTest.Helpers;
 using XamarinTest.Models;
 
@@ -34,13 +32,13 @@ namespace XamarinTest.Views
             System.Diagnostics.Debug.WriteLine("yes: " + query);
             if (!query)
             {
-                
+
                 //User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
                 //UserID = user.UserID;
             }
             else
             {
-                
+
                 var newPage = new NavigationPage(new LoginPage());
 
                 if (newPage != null && Detail != newPage)

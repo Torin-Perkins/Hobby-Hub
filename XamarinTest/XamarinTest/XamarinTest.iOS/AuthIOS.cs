@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Firebase.Auth;
+using System;
 using System.Threading.Tasks;
-using Firebase.Auth;
-using Foundation;
-using UIKit;
 
 namespace XamarinTest.iOS
 {

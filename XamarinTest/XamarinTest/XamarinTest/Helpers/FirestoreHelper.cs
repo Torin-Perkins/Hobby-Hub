@@ -1,24 +1,26 @@
-﻿using System;
+﻿using Plugin.CloudFirestore;
+using System;
 using System.Collections.Generic;
-using System.Text;
-using XamarinTest.Models;
-using Plugin.CloudFirestore;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
+using XamarinTest.Models;
 
 namespace XamarinTest.Helpers
 {
+	/*
+	 * FirestoreHelper contains every method to access the database
+	 * Uses functions in the Plugin.Cloud.Firestore
+	 * Simple NoSQL commands to query, retrieve, and update multiple collections
+	 * Instantiated by pages that need to access data from Google Firestore Database
+	 */
 	class FirestoreHelper
 	{
-		public List<Hobby> hobbies;
 		public FirestoreHelper()
-        {
-
-        }
-		public FirestoreHelper(string category)
-        {
-			//GetHobbiesByParentVoid(category);
-        }
+		{
+		}
+		/*
+		 * Async method to add model Post to the datbase
+		 */
 		public async void AddPost(Post post)
 		{
 			await CrossCloudFirestore.
@@ -26,6 +28,9 @@ namespace XamarinTest.Helpers
 				Instance.
 				GetCollection("Posts").
 				AddDocumentAsync(post);
+		/*
+		 * Async method to add model User to the datbase
+		 */
 		}
 		public async void CreateNewUser(User user)
 		{
@@ -35,6 +40,9 @@ namespace XamarinTest.Helpers
 				GetCollection("Users").
 				AddDocumentAsync(user);
 		}
+		/*
+		 * Async method to add model Hobby to the datbase
+		 */
 		public async void CreateNewHobby(Hobby hobby)
 		{
 			await CrossCloudFirestore.
@@ -43,6 +51,10 @@ namespace XamarinTest.Helpers
 			   GetCollection("Hobbies").
 			   AddDocumentAsync(hobby);
 		}
+		/*
+		 * Async Task to retrieve a bool datatype
+		 * Checks if any Id numbers match the input
+		 */
 		public async Task<bool> QueryUserID(string UserID)
 		{
 			var document = await CrossCloudFirestore.
@@ -54,8 +66,8 @@ namespace XamarinTest.Helpers
 
 			return document.IsEmpty;
 		}
-		public async Task<bool> QuertUserByUserName(string UserName)
-        {
+		public async Task<bool> QueryUserByUserName(string UserName)
+		{
 			var document = await CrossCloudFirestore.
 				Current.
 				Instance.
@@ -66,7 +78,7 @@ namespace XamarinTest.Helpers
 			return document.IsEmpty;
 		}
 		public async Task<bool> QueryPostByCategory(string ParentCategory)
-        {
+		{
 			var document = await CrossCloudFirestore.
 				Current.
 				Instance.
@@ -153,7 +165,7 @@ namespace XamarinTest.Helpers
 			return posts;
 		}
 		public async Task<List<Hobby>> GetHobbiesByParent(string ParentCategory)
-        {
+		{
 			var query = await CrossCloudFirestore.
 				Current.
 				Instance.
@@ -164,23 +176,7 @@ namespace XamarinTest.Helpers
 			System.Diagnostics.Debug.WriteLine("Hobbies: " + query.ToObjects<Hobby>().ToList<Hobby>().First().Text);
 
 			return hobbies;
-        }
-		public async Task GetHobbiesByParentVoid(string ParentCategory)
-		{
-			var query = await CrossCloudFirestore.
-				Current.
-				Instance.
-				GetCollection("Hobbies").
-				WhereEqualsTo("ParentCategory", ParentCategory).
-				GetDocumentsAsync();
-			hobbies = query.ToObjects<Hobby>().ToList<Hobby>();
-			System.Diagnostics.Debug.WriteLine("Hobbies: " + query.ToObjects<Hobby>().ToList<Hobby>().First().Text);
-
-			
 		}
-
-
-
 		private bool tempUser = true;
 		private async void checkUser(string UserID)
 		{

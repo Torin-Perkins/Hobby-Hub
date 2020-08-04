@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using XamarinTest.Helpers;
 using XamarinTest.Models;
 
@@ -32,7 +30,7 @@ namespace XamarinTest.Views
 
         async void Save_Clicked(object sender, EventArgs e)
         {
-           // MessagingCenter.Send(this, "AddItem", Item);
+            // MessagingCenter.Send(this, "AddItem", Item);
             firestoreHelper.CreateNewHobby(Item);
             await Navigation.PopModalAsync();
         }
