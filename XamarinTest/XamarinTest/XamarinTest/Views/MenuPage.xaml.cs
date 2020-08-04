@@ -17,7 +17,7 @@ namespace XamarinTest.Views
         public MenuPage()
         {
             InitializeComponent();
-
+            
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Home" },
@@ -34,6 +34,7 @@ namespace XamarinTest.Views
             ListViewMenu.ItemsSource = menuItems;
 
             ListViewMenu.SelectedItem = menuItems[0];
+           
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

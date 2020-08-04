@@ -24,8 +24,8 @@ namespace XamarinTest.Views
             InitializeComponent();
 
             MasterBehavior = MasterBehavior.Popover;
-            checkUsers();
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            checkUsers();
         }
         public async void checkUsers()
         {
@@ -34,12 +34,25 @@ namespace XamarinTest.Views
             System.Diagnostics.Debug.WriteLine("yes: " + query);
             if (!query)
             {
-                User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
-                UserID = user.UserID;
+                
+                //User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
+                //UserID = user.UserID;
             }
             else
             {
-                UserID = firestoreHelper.GenerateUserID(DeviceInfo.Model.ToString());
+                
+                var newPage = new NavigationPage(new LoginPage());
+
+                if (newPage != null && Detail != newPage)
+                {
+                    Detail = newPage;
+
+                    if (Device.RuntimePlatform == Device.Android)
+                        await Task.Delay(100);
+
+                    IsPresented = false;
+                }
+                // UserID = firestoreHelper.GenerateUserID(DeviceInfo.Model.ToString());
             }
         }
 
