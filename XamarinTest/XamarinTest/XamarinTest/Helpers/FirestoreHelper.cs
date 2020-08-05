@@ -187,6 +187,17 @@ namespace XamarinTest.Helpers
 			Debug.WriteLine("USBID: " + user[0].LoggedIn);
 			return user[0];
 		}
+		/*public async Task<User> GetUsernameById(string UserID)
+		{
+			var query = await CrossCloudFirestore.Current.Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserID", UserID).
+				LimitTo(1).
+				GetDocumentsAsync();
+			
+			User[] user
+			return UserName
+		}*/
 		/*
 		 * Async Task to retrieve a List of Posts datatype
 		 * Returns list posts in one category

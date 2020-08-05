@@ -7,18 +7,36 @@
              x:Class="XamarinTest.Views.RegisterPage">
     <ContentPage.Content>
         <StackLayout>
-            <Entry Placeholder="E-mail"
-            Keyboard="Email"
-            x:Name="EmailInput"/>
+            <Entry Placeholder="Enter E-mail"
+                   Margin="20,20,20,0"
+                   Keyboard="Email"
+                   x:Name="EmailInput"
+                   ClearButtonVisibility="WhileEditing"/>
+
             <Entry Placeholder="Username"
-                   x:Name="UserInput"/>
-            <Entry Placeholder="Password"
-            IsPassword="False"
-            x:Name="PasswordInput"/>
+                   Margin="20,20,20,0"
+                   x:Name="UserInput"
+                   ClearButtonVisibility="WhileEditing"/>
+            
+            <Entry Placeholder="Create Password"
+                   Margin="20,20,20,0"
+                    IsPassword="True"
+                   x:Name="PasswordInput"
+                   ClearButtonVisibility="WhileEditing"/>
+            
+            <Entry Placeholder="Confirm Password"
+                   Margin="20,20,20,0"
+                    IsPassword="True"
+                    x:Name="PasswordConfirmInput"
+                    ClearButtonVisibility="WhileEditing"/>
+            
             <Button x:Name="SubmitBtn"
+                    Margin="20,20,20,0"
                     Text="Submit"
                     Clicked="SubmitClicked"
-                    />
+                    BackgroundColor="#61bd50"
+                    FontAttributes="Bold"
+                    TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

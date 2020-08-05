@@ -4,23 +4,35 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamarinTest.Views.LoginPage">
-    
+             x:Class="XamarinTest.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+
     <ContentPage.Content>
         <StackLayout>
             <Entry Placeholder="E-mail"
+                   Margin="20,20,20,0"
             Keyboard="Email"
-            x:Name="EmailInput"/>
+            x:Name="EmailInput"
+                   ClearButtonVisibility="WhileEditing"/>
             <Entry Placeholder="Password"
+                   Margin="20,20,20,0"
             IsPassword="True"
-            x:Name="PasswordInput"/>
+            x:Name="PasswordInput"
+                   ClearButtonVisibility="WhileEditing"/>
             <Button Text="Login"
+                    Margin="20,20,20,0"
                     x:Name="LoginBtn"
                     Clicked="LoginSend"
-                    />
+                    BackgroundColor="#61bd50"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
             <Button Text="Sign Up"
+                    Margin="20,20,20,0"
                     x:Name="RegisterBtn"
-                    Clicked="RegisterSend"/>
+                    Clicked="RegisterSend"
+                    BackgroundColor="#49852f"
+                    FontAttributes="Bold"
+                    TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

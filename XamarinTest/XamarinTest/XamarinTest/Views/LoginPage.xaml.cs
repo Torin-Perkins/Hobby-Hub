@@ -10,16 +10,16 @@ namespace XamarinTest.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginPage : ContentPage
     {
-
         IAuth auth;
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        int homeid = (int)MenuItemType.Browse;
+        int homeid = (int)MenuItemType.Browse; 
 
         public LoginPage()
         {
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
+            RootPage.IsPresented = false;
         }
 
         async void LoginSend(object sender, EventArgs e)
@@ -43,6 +43,12 @@ namespace XamarinTest.Views
         async private void ShowError()
         {
             await DisplayAlert("Authentication Failed", "E-mail or password are incorrect. Try again!", "OK");
+        }
+        protected override void OnAppearing()
+        {
+            EmailInput.Text = "";
+            PasswordInput.Text = "";
+
         }
     }
 }

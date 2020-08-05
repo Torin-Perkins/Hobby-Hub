@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+
 using Xamarin.Forms;
+using Xamarin.Essentials;
+
 using XamarinTest.Helpers;
 using XamarinTest.Models;
+using System.Threading.Tasks;
 
 namespace XamarinTest.Views
 {
@@ -13,15 +17,22 @@ namespace XamarinTest.Views
     public partial class MenuPage : ContentPage
     {
         IAuth auth = DependencyService.Get<IAuth>();
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         int logoutid = (int)MenuItemType.LogOut;
         FirestoreHelper firestoreHelper = new FirestoreHelper();
 
         ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
+        String usernameString = "abc123";
         public MenuPage()
         {
+
+
             InitializeComponent();
+            this.UserCheck();
+
+
 
             menuItems = new List<HomeMenuItem>
             {
@@ -56,6 +67,15 @@ namespace XamarinTest.Views
 
             MainPage.UserID = null;
             await RootPage.NavigateFromMenu(logoutid);
+        }
+        async private void UserCheck()
+        {
+                User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
+            if (user != null)
+                usernameString = user.UserName;
+            else
+                usernameString =  "yaah";
+            usernameCheck.Text = usernameString;
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)
         {

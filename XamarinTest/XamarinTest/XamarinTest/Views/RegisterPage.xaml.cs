@@ -27,6 +27,10 @@ namespace XamarinTest.Views
                 {
                     await DisplayAlert("Sign Up Failed", "Username is already taken.", "OK");
                 }
+                else if(PasswordConfirmInput.Text != PasswordInput.Text)
+                {
+                    await DisplayAlert("Sign Up Failed", "Password fields do not match", "OK");
+                }
                 else
                 {
                     await DisplayAlert("Success", "Welcome to our system. Log in to have full access", "OK");

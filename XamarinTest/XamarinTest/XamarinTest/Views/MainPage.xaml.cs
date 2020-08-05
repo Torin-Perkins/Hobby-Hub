@@ -16,6 +16,7 @@ namespace XamarinTest.Views
     public partial class MainPage : MasterDetailPage
     {
         FirestoreHelper firestoreHelper = new FirestoreHelper();
+        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         public static string UserID;
         
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
@@ -55,7 +56,6 @@ namespace XamarinTest.Views
             {
 
                 var newPage = new NavigationPage(new LoginPage());
-
                 if (newPage != null && Detail != newPage)
                 {
                     Detail = newPage;
@@ -75,8 +75,6 @@ namespace XamarinTest.Views
             {
                 switch (id)
                 {
-                    // TODO: change this back to about page
-                    // TODO: the default page should be about page not browse page
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
@@ -118,6 +116,7 @@ namespace XamarinTest.Views
 
                 IsPresented = false;
             }
+
         }
     }
 }
