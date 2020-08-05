@@ -63,7 +63,7 @@ namespace XamarinTest.Helpers
 				Current.
 				Instance.
 				GetCollection("Users").
-				WhereEqualsTo("UserID", UserID).
+				WhereEqualsTo("Id", UserID).
 				GetDocumentsAsync();
 
 			return document.IsEmpty;
