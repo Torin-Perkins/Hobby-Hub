@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using XamarinTest.Models;
@@ -10,8 +11,9 @@ namespace XamarinTest.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
-        IAuth auth;
-        auth = DependencyService.Get<IAuth>();
+        IAuth auth = DependencyService.Get<IAuth>();
+        int logoutid = (int)MenuItemType.LogOut;
+
         ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
@@ -45,11 +47,11 @@ namespace XamarinTest.Views
                 await RootPage.NavigateFromMenu(id);
             };
         }
-        public async void LogOutClicked()
+        async void LogOutClicked(object sender, EventArgs args)
         {
             auth.LogOut();
             MainPage.UserID = null;
-            await Navigation.PushAsync(new LoginPage());
+            await RootPage.NavigateFromMenu(logoutid);
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)
         {

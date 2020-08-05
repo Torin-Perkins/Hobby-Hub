@@ -3,6 +3,8 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using XamarinTest.Models;
+
 namespace XamarinTest.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -10,6 +12,8 @@ namespace XamarinTest.Views
     {
 
         IAuth auth;
+        MainPage RootPage { get => Application.Current.MainPage as MainPage; }
+        int homeid = (int)MenuItemType.Browse;
 
         public LoginPage()
         {
@@ -23,7 +27,7 @@ namespace XamarinTest.Views
             if (Token != "")
             {
                 MainPage.UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text);
-                await Navigation.PushAsync(new ItemsPage());
+                await RootPage.NavigateFromMenu(homeid);
             }
             else
             {

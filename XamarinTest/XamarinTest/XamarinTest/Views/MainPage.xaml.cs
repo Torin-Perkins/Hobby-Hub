@@ -86,6 +86,9 @@ namespace XamarinTest.Views
                     case (int)MenuItemType.Sports:
                         MenuPages.Add(id, new NavigationPage(new SportsPage()));
                         break;
+                    case (int)MenuItemType.LogOut:
+                        MenuPages.Add(id, new NavigationPage(new LoginPage()));
+                        break;
                 }
             }
 

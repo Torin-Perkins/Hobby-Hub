@@ -9,7 +9,8 @@
         Technology,
         Math,
         Art,
-        Sports
+        Sports,
+        LogOut
     }
     public class HomeMenuItem
     {
