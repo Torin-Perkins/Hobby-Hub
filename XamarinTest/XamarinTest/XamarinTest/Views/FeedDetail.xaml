@@ -9,19 +9,7 @@
              Title="{Binding Title}">
 
     <StackLayout>
-        <ListView VerticalOptions="StartAndExpand"
-                  x:Name="Msg"
-                  IsPullToRefreshEnabled="True">
-
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell
-                        TextColor="Black"
-                        Text="{Binding PostText}" >
-                    </TextCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+       
 
         <CollectionView x:Name="ItemsCollectionView"
                 ItemsSource="{Binding allPosts}">

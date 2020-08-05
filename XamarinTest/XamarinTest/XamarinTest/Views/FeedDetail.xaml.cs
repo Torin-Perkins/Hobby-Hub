@@ -39,12 +39,12 @@ namespace XamarinTest.Views
                 return true;
             });
             //Command RefreshCommand = new Command();
-            Msg.RefreshCommand = new Command(() =>
-            {
+            //Msg.RefreshCommand = new Command(() =>
+          //  {
                 //Do your stuff.
-                updateMessagesAsync();
-                Msg.IsRefreshing = false;
-            });
+           //     updateMessagesAsync();
+            //    Msg.IsRefreshing = false;
+           // });
 
 
         }
