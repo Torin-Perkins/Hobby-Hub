@@ -39,5 +39,11 @@ namespace XamarinTest.Views
                 await DisplayAlert("Sign Up Failed", "Something went wrong. Try again!", "OK");
             }
         }
+        public async void LogOutClicked()
+        {
+            auth.LogOut();
+            MainPage.UserID = null;
+            await Navigation.PushAsync(new LoginPage());
+        }
     }
 }

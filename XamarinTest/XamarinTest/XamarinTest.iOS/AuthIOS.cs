@@ -1,4 +1,5 @@
 ﻿using Firebase.Auth;
+using Foundation;
 using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -41,6 +42,11 @@ namespace XamarinTest.iOS
             {
                 return false;
             }
+        }
+        public async void LogOut()
+        {
+            NSError nSError = new NSError();
+            await Auth.DefaultInstance.SignOut(out nSError);
         }
     }
 }

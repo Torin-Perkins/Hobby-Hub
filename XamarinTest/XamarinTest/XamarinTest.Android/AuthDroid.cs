@@ -46,5 +46,9 @@ namespace XamarinTest.Droid
             var token = user.User.Uid;
             return token;
         }
+        public async void LogOut()
+        {
+           FirebaseAuth.Instance.SignOut();
+        }
     }
 }
