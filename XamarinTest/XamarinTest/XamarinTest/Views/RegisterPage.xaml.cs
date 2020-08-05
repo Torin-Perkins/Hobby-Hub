@@ -30,7 +30,7 @@ namespace XamarinTest.Views
                 else
                 {
                     await DisplayAlert("Success", "Welcome to our system. Log in to have full access", "OK");
-                    firestoreHelper.CreateNewUser(new Models.User { UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text), DeviceModel = DeviceInfo.Model.ToString(), UserName = UserInput.Text });
+                    firestoreHelper.CreateNewUser(new Models.User { UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text), DeviceModel = DeviceInfo.Model.ToString(), UserName = UserInput.Text, LoggedIn = false, Id = firestoreHelper.GenerateUserID(DeviceInfo.Model.ToString() )});
                     await Navigation.PushAsync(new LoginPage());
                 }
             }

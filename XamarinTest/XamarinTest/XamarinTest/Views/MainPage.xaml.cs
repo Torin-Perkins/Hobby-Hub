@@ -17,7 +17,7 @@ namespace XamarinTest.Views
     {
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         public static string UserID;
-        public static bool LoggedIn;
+        
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
         public MainPage()
         {
@@ -32,11 +32,24 @@ namespace XamarinTest.Views
             var query = await firestoreHelper.QueryDeviceModel(DeviceInfo.Model.ToString());
 
             System.Diagnostics.Debug.WriteLine("yes: " + query);
-            if (LoggedIn)
+            if (!query)
             {
+                var user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
+                UserID = user.UserID;
+                if (!user.LoggedIn)
+                {
+                    var newPage = new NavigationPage(new LoginPage());
 
-                //User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
-                //UserID = user.UserID;
+                    if (newPage != null && Detail != newPage)
+                    {
+                        Detail = newPage;
+
+                        if (Device.RuntimePlatform == Device.Android)
+                            await Task.Delay(100);
+
+                        IsPresented = false;
+                    }
+                }
             }
             else
             {

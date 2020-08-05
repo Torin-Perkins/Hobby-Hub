@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
+using XamarinTest.Helpers;
 using XamarinTest.Models;
 
 namespace XamarinTest.Views
@@ -13,6 +14,7 @@ namespace XamarinTest.Views
     {
         IAuth auth = DependencyService.Get<IAuth>();
         int logoutid = (int)MenuItemType.LogOut;
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
 
         ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
@@ -49,9 +51,10 @@ namespace XamarinTest.Views
         }
         async void LogOutClicked(object sender, EventArgs args)
         {
+            await firestoreHelper.UpDateUserLog(MainPage.UserID, false);
             auth.LogOut();
+
             MainPage.UserID = null;
-            MainPage.LoggedIn = false;
             await RootPage.NavigateFromMenu(logoutid);
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)

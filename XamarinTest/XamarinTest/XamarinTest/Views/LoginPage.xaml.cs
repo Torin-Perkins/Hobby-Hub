@@ -2,7 +2,7 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using XamarinTest.Helpers;
 using XamarinTest.Models;
 
 namespace XamarinTest.Views
@@ -12,6 +12,7 @@ namespace XamarinTest.Views
     {
 
         IAuth auth;
+        FirestoreHelper firestoreHelper = new FirestoreHelper();
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         int homeid = (int)MenuItemType.Browse;
 
@@ -27,7 +28,7 @@ namespace XamarinTest.Views
             if (Token != "")
             {
                 MainPage.UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text);
-                MainPage.LoggedIn = true;
+                await firestoreHelper.UpDateUserLog(MainPage.UserID, true);
                 await RootPage.NavigateFromMenu(homeid);
             }
             else

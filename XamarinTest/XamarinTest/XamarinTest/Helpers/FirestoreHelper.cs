@@ -1,8 +1,10 @@
 ﻿using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using XamarinTest.Models;
 
 namespace XamarinTest.Helpers
@@ -28,9 +30,9 @@ namespace XamarinTest.Helpers
 				Instance.
 				GetCollection("Posts").
 				AddDocumentAsync(post);
-		/*
-		 * Async method to add model User to the datbase
-		 */
+			/*
+			 * Async method to add model User to the datbase
+			 */
 		}
 		public async void CreateNewUser(User user)
 		{
@@ -182,6 +184,7 @@ namespace XamarinTest.Helpers
 				LimitTo(1).
 				GetDocumentsAsync();
 			User[] user = query.ToObjects<User>().ToArray();
+			Debug.WriteLine("USBID: " + user[0].LoggedIn);
 			return user[0];
 		}
 		/*
@@ -300,6 +303,32 @@ namespace XamarinTest.Helpers
 				return hID;
 			}
 
+		}
+		public async Task UpDateUserLog(string UserID, bool LoggedIn)
+		{
+			var query = await CrossCloudFirestore.Current.Instance.
+				GetCollection("Users").
+				WhereEqualsTo("UserID", UserID).
+				LimitTo(1).
+				GetDocumentsAsync();
+			var yourModel = await GetUserById(UserID);
+			var reference =
+			CrossCloudFirestore.
+				Current.Instance.GetCollection("Users").GetDocument(query.ToString());
+			reference = CrossCloudFirestore.Current.Instance.GetDocument($"{"Users"}/{yourModel.Id}");
+				   
+
+
+			await CrossCloudFirestore.Current.Instance.RunTransactionAsync((transaction) =>
+			{
+				
+				
+				yourModel.LoggedIn = LoggedIn;
+
+				System.Diagnostics.Debug.WriteLine("Transaction: " + yourModel.LoggedIn);
+				
+				transaction.UpdateData(reference, yourModel);
+			});
 		}
 	}
 }
