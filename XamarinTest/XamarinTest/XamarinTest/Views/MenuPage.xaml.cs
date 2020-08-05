@@ -51,6 +51,7 @@ namespace XamarinTest.Views
         {
             auth.LogOut();
             MainPage.UserID = null;
+            MainPage.LoggedIn = false;
             await RootPage.NavigateFromMenu(logoutid);
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)

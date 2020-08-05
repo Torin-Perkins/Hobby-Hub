@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -16,6 +17,7 @@ namespace XamarinTest.Views
     {
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         public static string UserID;
+        public static bool LoggedIn;
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
         public MainPage()
         {
@@ -30,7 +32,7 @@ namespace XamarinTest.Views
             var query = await firestoreHelper.QueryDeviceModel(DeviceInfo.Model.ToString());
 
             System.Diagnostics.Debug.WriteLine("yes: " + query);
-            if (!query)
+            if (LoggedIn)
             {
 
                 //User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());

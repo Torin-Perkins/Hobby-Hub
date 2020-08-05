@@ -27,6 +27,7 @@ namespace XamarinTest.Views
             if (Token != "")
             {
                 MainPage.UserID = await auth.GetUserID(EmailInput.Text, PasswordInput.Text);
+                MainPage.LoggedIn = true;
                 await RootPage.NavigateFromMenu(homeid);
             }
             else
