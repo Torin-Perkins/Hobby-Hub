@@ -5,13 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinTest.Views.LoginPage">
+    
     <ContentPage.Content>
         <StackLayout>
             <Entry Placeholder="E-mail"
             Keyboard="Email"
             x:Name="EmailInput"/>
             <Entry Placeholder="Password"
-            IsPassword="False"
+            IsPassword="True"
             x:Name="PasswordInput"/>
             <Button Text="Login"
                     x:Name="LoginBtn"

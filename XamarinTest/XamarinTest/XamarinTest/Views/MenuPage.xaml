@@ -7,7 +7,7 @@
              x:Class="XamarinTest.Views.MenuPage"
              Title="Menu">
 
-    <StackLayout VerticalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="CenterAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <d:ListView.ItemsSource>
@@ -19,26 +19,31 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Tapped="ViewCell_Tapped">
-                            <Grid Padding="12">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="30" />
-                                        <RowDefinition Height="1"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="30"/>
-                                        <ColumnDefinition Width="1"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Image Grid.Column="0" Grid.Row="0"
+                        <Grid Padding="12">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30" />
+                                    <RowDefinition Height="1"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="1"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0"
                                     WidthRequest="30" HorizontalOptions="Start" Source="{Binding ImagePath}" />
-                                    <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="100"
+                                <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="100"
                                     HorizontalTextAlignment="Start" Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
-                                </Grid>
                             </Grid>
-                        </ViewCell>
-
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Margin="20,5,20,5" Text="Log out"
+                Clicked="LogOutClicked"
+                        VerticalOptions="CenterAndExpand"
+                        BackgroundColor="#49852f"
+                        TextColor="White" 
+                        FontAttributes="Bold"/>
     </StackLayout>
 </ContentPage>

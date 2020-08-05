@@ -11,9 +11,7 @@
     <StackLayout>
         <ListView VerticalOptions="StartAndExpand"
                   x:Name="Msg"
-                  IsPullToRefreshEnabled="True"
-
-                  >
+                  IsPullToRefreshEnabled="True">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -23,7 +21,7 @@
                     </TextCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>-->
+        </ListView>
 
         <CollectionView x:Name="ItemsCollectionView"
                 ItemsSource="{Binding allPosts}">

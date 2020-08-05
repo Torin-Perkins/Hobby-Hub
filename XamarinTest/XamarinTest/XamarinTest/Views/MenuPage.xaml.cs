@@ -10,6 +10,8 @@ namespace XamarinTest.Views
     [DesignTimeVisible(false)]
     public partial class MenuPage : ContentPage
     {
+        IAuth auth;
+        auth = DependencyService.Get<IAuth>();
         ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
         List<HomeMenuItem> menuItems;
@@ -42,6 +44,12 @@ namespace XamarinTest.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+        }
+        public async void LogOutClicked()
+        {
+            auth.LogOut();
+            MainPage.UserID = null;
+            await Navigation.PushAsync(new LoginPage());
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)
         {
