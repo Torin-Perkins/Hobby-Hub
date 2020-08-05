@@ -259,7 +259,7 @@ namespace XamarinTest.Helpers
 			}
 			else
 			{
-				CreateNewUser(new User { UserID = userID, DeviceModel = DeviceModel });
+				//CreateNewUser(new User { UserID = userID, DeviceModel = DeviceModel });
 				return userID;
 			}
 		}

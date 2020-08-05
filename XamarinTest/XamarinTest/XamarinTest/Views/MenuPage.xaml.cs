@@ -19,7 +19,7 @@ namespace XamarinTest.Views
         IAuth auth = DependencyService.Get<IAuth>();
         FirestoreHelper firestoreHelper = new FirestoreHelper();
         int logoutid = (int)MenuItemType.LogOut;
-        FirestoreHelper firestoreHelper = new FirestoreHelper();
+        //FirestoreHelper firestoreHelper = new FirestoreHelper();
 
         ViewCell lastCell;
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
