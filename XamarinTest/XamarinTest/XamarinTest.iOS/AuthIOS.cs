@@ -46,7 +46,7 @@ namespace XamarinTest.iOS
         public async void LogOut()
         {
             NSError nSError = new NSError();
-            await Auth.DefaultInstance.SignOut(out nSError);
+            object p = Auth.DefaultInstance.SignOut(out nSError);
         }
     }
 }
