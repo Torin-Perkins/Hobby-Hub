@@ -43,14 +43,13 @@
             Margin="20,5,20,5" 
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="Start"
-            x:Name="usernameCheck"
-            Text="Test"/>
+            Text="Username:"/>
         <Label
             Margin="20,5,20,5" 
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="Start"
-            x:Name="emailCheck"
-            Text="nuniob"/>
+            x:Name="usernameCheck"
+            Text="Test"/>
         <Button Margin="20,5,20,5" Text="Log out"
                 Clicked="LogOutClicked"
                         VerticalOptions="CenterAndExpand"

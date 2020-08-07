@@ -70,12 +70,21 @@ namespace XamarinTest.Views
         }
         async private void UserCheck()
         {
-                User user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString());
-            if (user != null)
+            try
+            {
+                var query = await firestoreHelper.QueryDeviceModel(DeviceInfo.Model.ToString());
+                User user = null;
+                if (!query)
+                {
+                    user = await firestoreHelper.GetUser(DeviceInfo.Model.ToString()); 
+                }
                 usernameString = user.UserName;
-            else
-                usernameString =  "yaah";
-            usernameCheck.Text = usernameString;
+                usernameCheck.Text = usernameString;
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine("Error in Usercheck() method in MenuPage.xaml.cs");
+            }
         }
         private void ViewCell_Tapped(object sender, System.EventArgs e)
         {
