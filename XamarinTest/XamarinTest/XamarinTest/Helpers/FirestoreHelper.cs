@@ -1,7 +1,9 @@
-﻿using Plugin.CloudFirestore;
+﻿using Firebase.Storage;
+using Plugin.CloudFirestore;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -340,6 +342,20 @@ namespace XamarinTest.Helpers
 				
 				transaction.UpdateData(reference, yourModel);
 			});
+		}
+		public async Task<string> UploadFile(Stream fileStream, string fileName, string category)
+        {
+			FirebaseStorage firebaseStorage = new FirebaseStorage("hobbyhub-e6f54.appspot.com");
+			var imageUrl = await firebaseStorage.Child(category).Child(fileName).PutAsync(fileStream);
+			return imageUrl;
+        }
+		public async Task<string> GetFile(string fileName, string category)
+		{
+			FirebaseStorage firebaseStorage = new FirebaseStorage("hobbyhub-e6f54.appspot.com");
+			return await firebaseStorage
+				.Child(category)
+				.Child(fileName).GetDownloadUrlAsync();
+				
 		}
 	}
 }

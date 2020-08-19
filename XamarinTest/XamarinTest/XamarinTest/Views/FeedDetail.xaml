@@ -15,6 +15,9 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10">
+                        <Image
+                            Source="{Binding File}"
+                            />
                         <Label Text="{Binding PostText}"
                                     d:Text="{Binding .}"
                                     LineBreakMode="NoWrap"
@@ -45,6 +48,9 @@
         <Button x:Name="Send"
                 Text="Send"
                 Clicked="BtnSend"/>
+        <Button x:Name="ImgPick"
+                Text="Pick an Image"
+                Clicked="BtnPick"/>
 
     </StackLayout>
 </ContentPage>

@@ -134,6 +134,7 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\iclauncherround.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\iclauncherforeground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\iclauncherround.png" />
+    <Content Include="file_paths.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

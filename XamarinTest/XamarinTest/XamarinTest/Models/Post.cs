@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.CloudFirestore.Attributes;
+using Plugin.Media.Abstractions;
+using System;
 
 namespace XamarinTest.Models
 {
@@ -9,5 +11,9 @@ namespace XamarinTest.Models
         public DateTime DatePosted { get; set; }
         public string PostText { get; set; }
         public string ParentCategory { get; set; }
+        public string Type { get; set; }
+        public string FileName { get; set; }
+        [Ignored]
+        public string File { get; set; }
     }
 }
